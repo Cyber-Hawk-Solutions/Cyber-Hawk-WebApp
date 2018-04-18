@@ -1,5 +1,195 @@
-extends layout
+extends layout.pug
 
-block content
-  h1= title
-  p Welcome to #{title}
+block body
+  div.header-blue
+    nav.navbar.navbar-dark.navbar-expand-md.navigation-clean-search
+      .container
+        a.navbar-brand(href='#') Company Name
+        button.navbar-toggler(data-toggle='collapse' data-target='#navcol-1')
+          span.sr-only Toggle navigation
+          span.navbar-toggler-icon
+        #navcol-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.nav-item(role='presentation')
+              a.nav-link.active(href='#') Link
+            li.dropdown
+              a.dropdown-toggle.nav-link.dropdown-toggle(data-toggle='dropdown' aria-expanded='false' href='#') Dropdown 
+              .dropdown-menu(role='menu')
+                a.dropdown-item(role='presentation' href='#') First Item
+                a.dropdown-item(role='presentation' href='#') Second Item
+                a.dropdown-item(role='presentation' href='#') Third Item
+          form.form-inline.mr-auto(target='_self')
+            .form-group
+              label(for='search-field')
+                i.fa.fa-search
+              input#search-field.form-control.search-field(type='search' name='search')
+          span.navbar-text
+            a.login(href='#') Log In
+          a.btn.btn-light.action-button(role='button' href='#') Sign Up
+    .container.hero
+      .row
+        .col-12.col-lg-6.col-xl-5.offset-xl-1
+          h1 The revolution is here.
+          p
+            | Mauris egestas tellus non ex condimentum, ac ullamcorper sapien dictum. Nam consequat neque quis sapien viverra convallis. In non tempus lorem.
+          button.btn.btn-light.btn-lg.action-button(type='button') Learn More
+        .col-md-5.col-lg-5.offset-lg-1.offset-xl-0.d-none.d-lg-block.phone-holder
+          .iphone-mockup
+            img.device(src='assets/img/iphone.svg')
+            .screen
+  .features-clean
+    .container
+      .intro
+        h2.text-center Features
+        p.text-center
+          | Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.
+      .row.features
+        .col-sm-6.col-lg-4.item
+          i.fa.fa-map-marker.icon
+          h3.name Works everywhere
+          p.description
+            | Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.
+        .col-sm-6.col-lg-4.item
+          i.fa.fa-clock-o.icon
+          h3.name Always available
+          p.description
+            | Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.
+        .col-sm-6.col-lg-4.item
+          i.fa.fa-list-alt.icon
+          h3.name Customizable
+          p.description
+            | Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.
+        .col-sm-6.col-lg-4.item
+          i.fa.fa-leaf.icon
+          h3.name Organic
+          p.description
+            | Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.
+        .col-sm-6.col-lg-4.item
+          i.fa.fa-plane.icon
+          h3.name Fast
+          p.description
+            | Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.
+        .col-sm-6.col-lg-4.item
+          i.fa.fa-phone.icon
+          h3.name Mobile-first
+          p.description
+            | Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.
+  .highlight-phone
+    .container
+      .row
+        .col-md-8
+          .intro
+            h2 Highlight
+            p
+              | Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. Aliqua sed justo ligula.
+            a.btn.btn-primary(role='button' href='#') Action Button
+        .col-sm-4
+          .d-none.d-md-block.iphone-mockup
+            img.device(src='assets/img/iphone.svg')
+            .screen
+  section#services(style='padding:28px;background-color:#ffffff;')
+    .container
+      .row
+        .col-lg-12.text-center(style='padding:0px;height:137px;')
+          h2.section-heading Services 
+          h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur. 
+      .row.text-center
+        .col-md-4
+          span.fa-stack.fa-4x
+            i.fa.fa-circle.fa-stack-2x.text-primary
+            i.fa.fa-shopping-cart.fa-stack-1x.fa-inverse
+          h4.service-heading E-Commerce
+          p.text-muted
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+        .col-md-4
+          span.fa-stack.fa-4x
+            i.fa.fa-circle.fa-stack-2x.text-primary
+            i.fa.fa-laptop.fa-stack-1x.fa-inverse
+          h4.service-heading Responsive Design
+          p.text-muted
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+        .col-md-4
+          span.fa-stack.fa-4x
+            i.fa.fa-circle.fa-stack-2x.text-primary
+            i.fa.fa-lock.fa-stack-1x.fa-inverse
+          h4.service-heading Web Security
+          p.text-muted
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+  .team-boxed
+    .container
+      .intro
+        h2.text-center Team 
+        p.text-center
+          | Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.
+      .row.people
+        .col-md-6.col-lg-4.item
+          .box
+            img.rounded-circle(src='assets/img/1.jpg')
+            h3.name Ben Johnson
+            p.title Musician
+            p.description
+              | Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa.
+            .social
+              a(href='#')
+                i.fa.fa-facebook-official
+              a(href='#')
+                i.fa.fa-twitter
+              a(href='#')
+                i.fa.fa-instagram
+        .col-md-6.col-lg-4.item
+          .box
+            img.rounded-circle(src='assets/img/2.jpg')
+            h3.name Emily Clark
+            p.title Artist
+            p.description
+              | Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa.
+            .social
+              a(href='#')
+                i.fa.fa-facebook-official
+              a(href='#')
+                i.fa.fa-twitter
+              a(href='#')
+                i.fa.fa-instagram
+        .col-md-6.col-lg-4.item
+          .box
+            img.rounded-circle(src='assets/img/3.jpg')
+            h3.name Carl Kent
+            p.title Stylist
+            p.description
+              | Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa.
+            .social
+              a(href='#')
+                i.fa.fa-facebook-official
+              a(href='#')
+                i.fa.fa-twitter
+              a(href='#')
+                i.fa.fa-instagram
+  .register-photo
+    .form-container
+      .image-holder
+      form(method='post')
+        h2.text-center
+          strong Create
+          |  an account.
+        .form-group
+          input.form-control(type='email' name='email' placeholder='Email')
+        .form-group
+          input.form-control(type='password' name='password' placeholder='Password')
+        .form-group
+          input.form-control(type='password' name='password-repeat' placeholder='Password (repeat)')
+        .form-group
+          .form-check
+            label.form-check-label
+              input.form-check-input(type='checkbox')
+              | I agree to the license terms.
+        .form-group
+          button.btn.btn-primary.btn-block(type='submit') Sign Up
+        a.already(href='#') You already have an account? Login here.
+  .brands
+    a(href='#')
+      img(src='assets/img/instacart.png')
+      img(src='assets/img/kickstarter.png')
+      img(src='assets/img/lyft.png')
+      img(src='assets/img/shopify.png')
+      img(src='assets/img/pinterest.png')
+      img(src='assets/img/twitter.png')

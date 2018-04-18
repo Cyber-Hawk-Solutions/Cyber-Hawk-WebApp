@@ -1,0 +1,32 @@
+#services .text-muted {
+  color:#777;
+}
+
+section#services {
+  padding:100px 0;
+}
+
+section#services h2.section-heading {
+  font-size:40px;
+  margin-top:0;
+  margin-bottom:15px;
+}
+
+section#services h3.section-subheading {
+  font-size:16px;
+  text-transform:none;
+  font-weight:400;
+  margin-bottom:75px;
+}
+
+@media (min-width:768px) {
+  section#services {
+    padding:150px 0;
+  }
+}
+
+#services .service-heading {
+  margin:15px 0;
+  text-transform:none;
+}
+
