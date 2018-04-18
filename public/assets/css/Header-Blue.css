@@ -1,8 +1,8 @@
 .header-blue {
-  background:linear-gradient(135deg, #172a74, #21a9af);
-  background-color:#184e8e;
-  padding-bottom:80px;
-  font-family:'Source Sans Pro', sans-serif;
+  background: linear-gradient(135deg, #013644 -40%, #21a9af 69%);
+  background-color: #184e8e;
+  padding-bottom: 80px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 @media (min-width:768px) {
@@ -12,7 +12,7 @@
 }
 
 .header-blue .navbar {
-  background:transparent;
+  background:transparent; 
   padding-top:.75rem;
   padding-bottom:.75rem;
   color:#fff;
