@@ -53,6 +53,8 @@
   color:#d9d9d9;
   margin-right:.5rem;
   text-decoration:none;
+  background: none;
+  border: none;
 }
 
 .header-blue .navbar .navbar-collapse span .login:hover {
