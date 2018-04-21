@@ -26,90 +26,16 @@ block body
           span.navbar-text.actions
             a.login(href='#' style='color:#dddddd;') Log In
             a.btn.btn-light.action-button(role='button' href='#' style='background-color:#018ca7;') Sign Up
-  div.parallax-header(data-bs-parallax-bg='true' style='height:165px;background-image:url(https://unsplash.it/1800/900?image=1051);background-position:center;background-size:cover;')
+  div.parallax-header
+    div.d-flex.justify-content-center(data-bs-parallax-bg='true' style='height:165px;background-image:url(https://unsplash.it/1800/900?image=1051);background-position:center;background-size:cover;')
+      h1.align-self-center.text-center.text-light 
+        block page-title
+          | Page Title 
   div
     .container
       .row
         .col-md-12(style='margin:0px;margin-top:33px;')
           .card
             .card-body
-              section
-                h2 Security Enhancement Analysis
-                section#services(style='padding-top:21px;padding-bottom:20px;')
-                  .container
-                    .row.text-center
-                      .col-md-4
-                        span.fa-stack.fa-4x(style='font-size:50px;')
-                          i.fa.fa-circle.fa-stack-2x.text-primary
-                          i.fa.fa-mobile-phone.fa-stack-1x.fa-inverse
-                        h4.service-heading(style='color:#333333;') Website/App
-                        p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                      .col-md-4
-                        span.fa-stack.fa-4x(style='font-size:50px;')
-                          i.fa.fa-circle.fa-stack-2x.text-primary
-                          i.fa.fa-desktop.fa-stack-1x.fa-inverse
-                        h4.service-heading(style='color:#333333;') Desktop Software
-                        p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                      .col-md-4
-                        span.fa-stack.fa-4x(style='font-size:50px;')
-                          i.fa.fa-circle.fa-stack-2x.text-primary
-                          i.fa.fa-server.fa-stack-1x.fa-inverse
-                        h4.service-heading(style='color:#333333;') Network
-                        p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                section
-                  h2 Web and Application Development
-                  section#services(style='padding-top:21px;padding-bottom:20px;')
-                    .container
-                      .row.text-center
-                        .col-md-4
-                          span.fa-stack.fa-4x(style='font-size:50px;')
-                            i.fa.fa-circle.fa-stack-2x.text-primary
-                            i.fa.fa-mobile-phone.fa-stack-1x.fa-inverse
-                          h4.service-heading(style='color:#333333;') App
-                          p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                        .col-md-4
-                          span.fa-stack.fa-4x(style='font-size:50px;')
-                            i.fa.fa-circle.fa-stack-2x.text-primary
-                            i.fa.fa-laptop.fa-stack-1x.fa-inverse
-                          h4.service-heading(style='color:#333333;') Website/ Web App
-                          p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                        .col-md-4
-                          span.fa-stack.fa-4x(style='font-size:50px;')
-                            i.fa.fa-circle.fa-stack-2x.text-primary
-                            i.fa.fa-desktop.fa-stack-1x.fa-inverse
-                          h4.service-heading(style='color:#333333;') Software
-                          p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                section
-                  h2 Penatration Testing
-                  section#services(style='padding-top:21px;padding-bottom:20px;')
-                    .container
-                      .row.text-center
-                        .col-md-4
-                          span.fa-stack.fa-4x(style='font-size:50px;')
-                            i.fa.fa-circle.fa-stack-2x.text-primary
-                            i.fa.fa-mobile-phone.fa-stack-1x.fa-inverse
-                          h4.service-heading(style='color:#333333;') App/Website
-                          p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                        .col-md-4
-                          span.fa-stack.fa-4x(style='font-size:50px;')
-                            i.fa.fa-circle.fa-stack-2x.text-primary
-                            i.fa.fa-desktop.fa-stack-1x.fa-inverse
-                          h4.service-heading(style='color:#333333;') Software
-                          p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                        .col-md-4
-                          span.fa-stack.fa-4x(style='font-size:50px;')
-                            i.fa.fa-circle.fa-stack-2x.text-primary
-                            i.fa.fa-server.fa-stack-1x.fa-inverse
-                          h4.service-heading(style='color:#333333;') Network
-                          p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  section
-                    h2 Network Setup/ Maintenance 
-                    section#services(style='padding-top:21px;padding-bottom:20px;')
-                      .container
-                        .row.text-center
-                          .col-md-4
-                            span.fa-stack.fa-4x(style='font-size:50px;')
-                              i.fa.fa-circle.fa-stack-2x.text-primary
-                              i.fa.fa-user.fa-stack-1x.fa-inverse
-                            h4.service-heading(style='color:#333333;')
-                            p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              block content
+              
