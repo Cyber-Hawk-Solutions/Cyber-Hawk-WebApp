@@ -1,0 +1,115 @@
+extends layout.pug
+
+block append styles
+  link(rel='stylesheet' href='assets/css/Navigation-with-Button.css')
+  link(rel='stylesheet' href='assets/css/Services.css')
+block body
+  div
+    nav.navbar.navbar-light.navbar-expand-md.navigation-clean-button(style='background-color:#013644;')
+      .container
+        a.navbar-brand(href='#' style='color:#ffffff;') Cyber Hawk
+        button.navbar-toggler(data-toggle='collapse' data-target='#navcol-1')
+          span.sr-only Toggle navigation
+          span.navbar-toggler-icon
+        #navcol-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.mr-auto
+            li.nav-item(role='presentation')
+              a.nav-link.active(href='#' style='color:#dddddd;') First Item
+            li.nav-item(role='presentation')
+              a.nav-link(href='#' style='color:#dddddd;') Second Item
+            li.dropdown
+              a.dropdown-toggle.nav-link.dropdown-toggle(data-toggle='dropdown' aria-expanded='false' href='#' style='color:#dddddd;') Dropdown 
+              .dropdown-menu(role='menu')
+                a.dropdown-item(role='presentation' href='#') First Item
+                a.dropdown-item(role='presentation' href='#') Second Item
+                a.dropdown-item(role='presentation' href='#') Third Item
+          span.navbar-text.actions
+            a.login(href='#' style='color:#dddddd;') Log In
+            a.btn.btn-light.action-button(role='button' href='#' style='background-color:#018ca7;') Sign Up
+  div(data-bs-parallax-bg='true' style='height:165px;background-image:url(https://unsplash.it/1800/900?image=1051);background-position:center;background-size:cover;')
+  div
+    .container
+      .row
+        .col-md-12(style='margin:0px;margin-top:33px;')
+          .card
+            .card-body
+              section
+                h2 Security Enhancement Analysis
+                section#services(style='padding-top:21px;padding-bottom:20px;')
+                  .container
+                    .row.text-center
+                      .col-md-4
+                        span.fa-stack.fa-4x(style='font-size:50px;')
+                          i.fa.fa-circle.fa-stack-2x.text-primary
+                          i.fa.fa-mobile-phone.fa-stack-1x.fa-inverse
+                        h4.service-heading(style='color:#333333;') Website/App
+                        p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                      .col-md-4
+                        span.fa-stack.fa-4x(style='font-size:50px;')
+                          i.fa.fa-circle.fa-stack-2x.text-primary
+                          i.fa.fa-desktop.fa-stack-1x.fa-inverse
+                        h4.service-heading(style='color:#333333;') Desktop Software
+                        p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                      .col-md-4
+                        span.fa-stack.fa-4x(style='font-size:50px;')
+                          i.fa.fa-circle.fa-stack-2x.text-primary
+                          i.fa.fa-server.fa-stack-1x.fa-inverse
+                        h4.service-heading(style='color:#333333;') Network
+                        p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                section
+                  h2 Web and Application Development
+                  section#services(style='padding-top:21px;padding-bottom:20px;')
+                    .container
+                      .row.text-center
+                        .col-md-4
+                          span.fa-stack.fa-4x(style='font-size:50px;')
+                            i.fa.fa-circle.fa-stack-2x.text-primary
+                            i.fa.fa-mobile-phone.fa-stack-1x.fa-inverse
+                          h4.service-heading(style='color:#333333;') App
+                          p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        .col-md-4
+                          span.fa-stack.fa-4x(style='font-size:50px;')
+                            i.fa.fa-circle.fa-stack-2x.text-primary
+                            i.fa.fa-laptop.fa-stack-1x.fa-inverse
+                          h4.service-heading(style='color:#333333;') Website/ Web App
+                          p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        .col-md-4
+                          span.fa-stack.fa-4x(style='font-size:50px;')
+                            i.fa.fa-circle.fa-stack-2x.text-primary
+                            i.fa.fa-desktop.fa-stack-1x.fa-inverse
+                          h4.service-heading(style='color:#333333;') Software
+                          p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                section
+                  h2 Penatration Testing
+                  section#services(style='padding-top:21px;padding-bottom:20px;')
+                    .container
+                      .row.text-center
+                        .col-md-4
+                          span.fa-stack.fa-4x(style='font-size:50px;')
+                            i.fa.fa-circle.fa-stack-2x.text-primary
+                            i.fa.fa-mobile-phone.fa-stack-1x.fa-inverse
+                          h4.service-heading(style='color:#333333;') App/Website
+                          p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        .col-md-4
+                          span.fa-stack.fa-4x(style='font-size:50px;')
+                            i.fa.fa-circle.fa-stack-2x.text-primary
+                            i.fa.fa-desktop.fa-stack-1x.fa-inverse
+                          h4.service-heading(style='color:#333333;') Software
+                          p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        .col-md-4
+                          span.fa-stack.fa-4x(style='font-size:50px;')
+                            i.fa.fa-circle.fa-stack-2x.text-primary
+                            i.fa.fa-server.fa-stack-1x.fa-inverse
+                          h4.service-heading(style='color:#333333;') Network
+                          p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  section
+                    h2 Network Setup/ Maintenance 
+                    section#services(style='padding-top:21px;padding-bottom:20px;')
+                      .container
+                        .row.text-center
+                          .col-md-4
+                            span.fa-stack.fa-4x(style='font-size:50px;')
+                              i.fa.fa-circle.fa-stack-2x.text-primary
+                              i.fa.fa-user.fa-stack-1x.fa-inverse
+                            h4.service-heading(style='color:#333333;')
+                            p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit.

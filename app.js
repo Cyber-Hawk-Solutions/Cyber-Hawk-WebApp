@@ -29,6 +29,10 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 
+app.get('/services', function(req, res) {
+  res.render('single-page-header');
+});
+
 app.get('/dashboard', function(req, res) {
   res.render('dashboard');
 });
