@@ -37,8 +37,8 @@ app.get('/dashboard', function(req, res) {
   res.render('dashboard');
 });
 
-app.get('/login', function(req, res) {
-  res.render('login');
+app.get('/services', function(req, res) {
+  res.render('services');
 });
 
 // catch 404 and forward to error handler
