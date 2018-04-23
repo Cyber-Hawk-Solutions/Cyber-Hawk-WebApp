@@ -2,14 +2,43 @@
   color: #018ca7 !important;
 }
 
+.text-primary-dark {
+  color: #1f6e84 !important;
+}
+.text-secondary {
+  color: #003847 !important;
+}
+
+h2 {
+  color: #495057 !important;
+}
+
 .card {
   background-color: rgba(248,249,250,0.5);
 }
 
-.card .card-body {
+.main .card .card-body {
   padding: 3.25rem !important;
 } 
 
 .parallax-header {
   background: #01364461!important;
+}
+
+.parallax-header .header-card {
+  height: 80%;
+  margin-left: 30px;
+}
+
+.header-card .card-body {
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+}
+
+.card .selected-light {
+  background: #ffffff8f;
+}
+
+.card .selected-success {
+    background: #21a9af63;
 }

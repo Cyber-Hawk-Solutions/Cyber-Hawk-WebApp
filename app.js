@@ -30,11 +30,15 @@ app.get('/', function(req, res) {
 });
 
 app.get('/services', function(req, res) {
-  res.render('single-page-header');
+  res.render('services');
 });
 
 app.get('/dashboard', function(req, res) {
   res.render('dashboard');
+});
+
+app.get('/app-estimate', function(req, res) {
+  res.render('cost-estimator');
 });
 
 app.get('/login', function(req, res) {
