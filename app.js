@@ -9,8 +9,8 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var pug = require('pug');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+// var indexRouter = require('./routes/index');
+var emailRouter = require('./routes/emails');
 
 var app = express();
 
@@ -48,6 +48,8 @@ app.get('/login', function(req, res) {
 app.get('/pricing', function(req, res) {
   res.render('pricing');
 });
+
+app.use('/email', emailRouter); 
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
