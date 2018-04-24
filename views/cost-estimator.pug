@@ -2,6 +2,8 @@ extends single-page-header.pug
 
 block append styles
   link(rel='stylesheet' href='assets/css/Services.css')
+block append scripts
+    script(src='/assets/js/cost-estimator.js')
 block page-title
   .text-center.row
   h1.text-light.align-self-center  Cost Estimator
@@ -22,7 +24,7 @@ block page-title
 block content
   section
     h2 How big is your website?
-    section#services(style='padding-top:21px;padding-bottom:20px;')
+    section.service-item(style='padding-top:21px;padding-bottom:20px;')
       .container
         .row.text-center
           .col-md-4
@@ -45,7 +47,7 @@ block content
             p.text-muted 10-15 key Feature Pages.
     section
       h2 Users and Accounts
-      section#services(style='padding-top:21px;padding-bottom:20px;')
+      section.service-item(style='padding-top:21px;padding-bottom:20px;')
         .container
           .row.text-center
             .col-md-3
@@ -74,7 +76,7 @@ block content
               p.text-muted Account based signups, each with their own administrators and users
     section
       h2 User Generated Content
-      section#services(style='padding-top:21px;padding-bottom:20px;')
+      section.service-item(style='padding-top:21px;padding-bottom:20px;')
         .container
           .row.text-center
             .col-md-3
@@ -127,7 +129,7 @@ block content
               p.text-muted Allows for restaurant/product and customer satisfaction reviews.
       section
         h2 dates/ Locations
-        section#services(style='padding-top:21px;padding-bottom:20px;')
+        section.service-item(style='padding-top:21px;padding-bottom:20px;')
           .container
             .row.text-center
               .col-md-4
@@ -142,7 +144,7 @@ block content
                   i.fa.fa-user.fa-stack-1x.fa-inverse
                 h4.service-heading(style='color:#333333;') Display of mad data/ Geolocation
                 p.text-muted Display a map with data points.
-        section#services(style='padding-top:21px;padding-bottom:20px;')
+        section.service-item(style='padding-top:21px;padding-bottom:20px;')
           .container
             .row.text-center
               .col-md-4
@@ -159,7 +161,7 @@ block content
                 p.text-muted Display a map with data points.
       section
         h2 Network Setup/ Maintenance 
-        section#services(style='padding-top:21px;padding-bottom:20px;')
+        section.service-item(style='padding-top:21px;padding-bottom:20px;')
           .container
             .row.text-center
               .col-md-4
@@ -170,7 +172,7 @@ block content
                 p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       section
         h2 Network Setup/ Maintenance 
-        section#services(style='padding-top:21px;padding-bottom:20px;')
+        section.service-item(style='padding-top:21px;padding-bottom:20px;')
           .container
             .row.text-center
               .col-md-4
@@ -181,7 +183,7 @@ block content
                 p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       section
         h2 Network Setup/ Maintenance 
-        section#services(style='padding-top:21px;padding-bottom:20px;')
+        section.service-item(style='padding-top:21px;padding-bottom:20px;')
           .container
             .row.text-center
               .col-md-4
