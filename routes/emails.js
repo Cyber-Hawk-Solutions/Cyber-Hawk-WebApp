@@ -5,7 +5,16 @@ var pug = require('pug');
 var account = { 'email': 'cyberhawktestemail@gmail.com', 'password': 'Password100'};
 
 // create reusable transporter object using the default SMTP transport
+var estimate = {
+  period: 30,
+  dayRate: 50,
+  items: [
+    {title: 'Maps', period: 10},
+    {title: 'Push Notifications', period: 20}
 
+  ]
+
+};
 
 router.post('/new',function(req,res,next){
 
@@ -29,7 +38,7 @@ router.post('/new',function(req,res,next){
     template: '../../views/emails/email-template',
    
     // Data to be sent to PugJS template files. 
-    data: req.body.estmate
+    data: estimate //req.body.estmate
   })
   .then( function(response){
     console.log('Message sent!');
