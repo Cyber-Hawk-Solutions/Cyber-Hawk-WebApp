@@ -13,12 +13,17 @@ var passport = require('passport');
 var flash = require('connect-flash');
 var session = require('express-session');
 
+<<<<<<< HEAD
 var configDB = require('./config/database.js');
 
 //mongoose.connect(configDB.url);
 
 //var indexRouter = require('./routes/index');
 var route = require('./routes/route');
+=======
+// var indexRouter = require('./routes/index');
+var emailRouter = require('./routes/emails');
+>>>>>>> 2232885ebe4aeb1d2333a31f8d8a4db7862cb06e
 
 var app = express();
 
@@ -48,17 +53,22 @@ app.get('/', function(req, res) {
 });
 
 app.get('/services', function(req, res) {
-  res.render('single-page-header');
+  res.render('services');
 });
 
 app.get('/dashboard', function(req, res) {
   res.render('dashboard');
 });
 
+app.get('/app-estimate', function(req, res) {
+  res.render('cost-estimator');
+});
+
 app.get('/login', function(req, res) {
   res.render('login');
 });
 
+<<<<<<< HEAD
 app.get('/dashboard', isLoggedIn, function(req, res) {
   res.render('dashboard', {
       user : req.user // get the user out of session and pass to template
@@ -85,6 +95,13 @@ if (req.isAuthenticated())
 // if they aren't redirect them to the home page
 res.redirect('/login');
 }
+=======
+app.get('/pricing', function(req, res) {
+  res.render('pricing');
+});
+
+app.use('/email', emailRouter); 
+>>>>>>> 2232885ebe4aeb1d2333a31f8d8a4db7862cb06e
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

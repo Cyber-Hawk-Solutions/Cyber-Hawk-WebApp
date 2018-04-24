@@ -7,22 +7,17 @@ block body
   div
     nav.navbar.navbar-light.navbar-expand-md.navigation-clean-button(style='background-color:#013644;')
       .container
-        a.navbar-brand(href='#' style='color:#ffffff;') Cyber Hawk
+        img(src='assets/img/Cyber Hawk Logo.png' alt='Cyber Hawk Logo' width='75' height='75' href='')
+        a.navbar-brand(href='' style='color:#ffffff;') Cyber Hawk
         button.navbar-toggler(data-toggle='collapse' data-target='#navcol-1')
           span.sr-only Toggle navigation
           span.navbar-toggler-icon
         #navcol-1.collapse.navbar-collapse
           ul.nav.navbar-nav.mr-auto
             li.nav-item(role='presentation')
-              a.nav-link.active(href='#' style='color:#dddddd;') First Item
-            li.nav-item(role='presentation')
-              a.nav-link(href='#' style='color:#dddddd;') Second Item
-            li.dropdown
-              a.dropdown-toggle.nav-link.dropdown-toggle(data-toggle='dropdown' aria-expanded='false' href='#' style='color:#dddddd;') Dropdown 
-              .dropdown-menu(role='menu')
-                a.dropdown-item(role='presentation' href='#') First Item
-                a.dropdown-item(role='presentation' href='#') Second Item
-                a.dropdown-item(role='presentation' href='#') Third Item
+              a.nav-link.active(href='/services' style='color:#dddddd;') Services
+              li.nav-item(role='presentation')
+              a.nav-link.active(href='/pricing' style='color:#dddddd;') Pricing
           span.navbar-text.actions
             a.login(href='#' style='color:#dddddd;') Log In
             a.btn.btn-light.action-button(role='button' href='#' style='background-color:#018ca7;') Sign Up
