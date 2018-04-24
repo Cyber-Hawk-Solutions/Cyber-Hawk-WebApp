@@ -43,6 +43,7 @@ app.get('/app-estimate', function(req, res) {
 
 app.get('/login', function(req, res) {
   res.render('login');
+});
 
 app.get('/pricing', function(req, res) {
   res.render('pricing');
