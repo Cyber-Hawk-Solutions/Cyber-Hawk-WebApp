@@ -1,0 +1,15 @@
+.text-primary {
+  color: #018ca7 !important;
+}
+
+.card {
+  background-color: rgba(248,249,250,0.5);
+}
+
+.card .card-body {
+  padding: 3.25rem !important;
+} 
+
+.parallax-header {
+  background: #01364461!important;
+}

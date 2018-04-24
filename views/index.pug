@@ -4,34 +4,35 @@ block body
   div.header-blue
     nav.navbar.navbar-dark.navbar-expand-md.navigation-clean-search
       .container
-        a.navbar-brand(href='#') Company Name
-        button.navbar-toggler(data-toggle='collapse' data-target='#navcol-1')
+        img(src='assets/img/Cyber Hawk Logo.png' alt='Cyber Hawk Logo' width='75' height='75')
+        a.navbar-brand(href='') Cyber Hawk 
+        button.navbar-toggler(href='' data-toggle='collapse' data-target='#navcol-1')
           span.sr-only Toggle navigation
           span.navbar-toggler-icon
         #navcol-1.collapse.navbar-collapse
           ul.nav.navbar-nav
             li.nav-item(role='presentation')
-              a.nav-link.active(href='#') Link
-            li.dropdown
-              a.dropdown-toggle.nav-link.dropdown-toggle(data-toggle='dropdown' aria-expanded='false' href='#') Dropdown 
-              .dropdown-menu(role='menu')
-                a.dropdown-item(role='presentation' href='#') First Item
-                a.dropdown-item(role='presentation' href='#') Second Item
-                a.dropdown-item(role='presentation' href='#') Third Item
+              a.nav-link.active(href='#') Services
+              li.nav-item(role='presentation')
+              a.nav-link(href='#') Pricing
+           
           form.form-inline.mr-auto(target='_self')
             .form-group
               label(for='search-field')
                 i.fa.fa-search
               input#search-field.form-control.search-field(type='search' name='search')
           span.navbar-text
-            a.login(href='#') Log In
+            // Button trigger modal
+            button.btn.btn-primary.login(type='button' data-toggle='modal' data-target='#exampleModal')
+              | Login
+
           a.btn.btn-light.action-button(role='button' href='#') Sign Up
     .container.hero
       .row
         .col-12.col-lg-6.col-xl-5.offset-xl-1
-          h1 The revolution is here.
+          h1 The Cyber Hawk revolution is here.
           p
-            | Mauris egestas tellus non ex condimentum, ac ullamcorper sapien dictum. Nam consequat neque quis sapien viverra convallis. In non tempus lorem.
+            | Welcome to the Cyber Hawk webpage! Need help in implimenting an IT system or maybe building a website you are in the right place.
           button.btn.btn-light.btn-lg.action-button(type='button') Learn More
         .col-md-5.col-lg-5.offset-lg-1.offset-xl-0.d-none.d-lg-block.phone-holder
           .iphone-mockup
@@ -40,38 +41,38 @@ block body
   .features-clean
     .container
       .intro
-        h2.text-center Features
+        h2.text-center Services 
         p.text-center
           | Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.
       .row.features
         .col-sm-6.col-lg-4.item
           i.fa.fa-map-marker.icon
-          h3.name Works everywhere
+          h3.name Website Development
           p.description
             | Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.
         .col-sm-6.col-lg-4.item
           i.fa.fa-clock-o.icon
-          h3.name Always available
+          h3.name Cyber Security
           p.description
             | Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.
         .col-sm-6.col-lg-4.item
           i.fa.fa-list-alt.icon
-          h3.name Customizable
+          h3.name Computer Repairs
           p.description
             | Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.
         .col-sm-6.col-lg-4.item
           i.fa.fa-leaf.icon
-          h3.name Organic
+          h3.name Graphic Designing
           p.description
             | Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.
         .col-sm-6.col-lg-4.item
           i.fa.fa-plane.icon
-          h3.name Fast
+          h3.name Networking
           p.description
             | Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.
         .col-sm-6.col-lg-4.item
           i.fa.fa-phone.icon
-          h3.name Mobile-first
+          h3.name Mobile Development
           p.description
             | Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.
   .highlight-phone
@@ -79,10 +80,10 @@ block body
       .row
         .col-md-8
           .intro
-            h2 Highlight
+            h2 Contact Us
             p
-              | Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. Aliqua sed justo ligula.
-            a.btn.btn-primary(role='button' href='#') Action Button
+              | Have questions or require our services? Hit us up via email: cyberhawk@gmail.com or ring us: (268)480-2420
+            
         .col-sm-4
           .d-none.d-md-block.iphone-mockup
             img.device(src='assets/img/iphone.svg')
@@ -114,56 +115,8 @@ block body
             i.fa.fa-lock.fa-stack-1x.fa-inverse
           h4.service-heading Web Security
           p.text-muted
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-  .team-boxed
-    .container
-      .intro
-        h2.text-center Team 
-        p.text-center
-          | Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.
-      .row.people
-        .col-md-6.col-lg-4.item
-          .box
-            img.rounded-circle(src='assets/img/1.jpg')
-            h3.name Ben Johnson
-            p.title Musician
-            p.description
-              | Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa.
-            .social
-              a(href='#')
-                i.fa.fa-facebook-official
-              a(href='#')
-                i.fa.fa-twitter
-              a(href='#')
-                i.fa.fa-instagram
-        .col-md-6.col-lg-4.item
-          .box
-            img.rounded-circle(src='assets/img/2.jpg')
-            h3.name Emily Clark
-            p.title Artist
-            p.description
-              | Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa.
-            .social
-              a(href='#')
-                i.fa.fa-facebook-official
-              a(href='#')
-                i.fa.fa-twitter
-              a(href='#')
-                i.fa.fa-instagram
-        .col-md-6.col-lg-4.item
-          .box
-            img.rounded-circle(src='assets/img/3.jpg')
-            h3.name Carl Kent
-            p.title Stylist
-            p.description
-              | Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa.
-            .social
-              a(href='#')
-                i.fa.fa-facebook-official
-              a(href='#')
-                i.fa.fa-twitter
-              a(href='#')
-                i.fa.fa-instagram
+            | Welcome to Cyber Hawk, Come meet our team!
+  
   .register-photo
     .form-container
       .image-holder
@@ -193,3 +146,21 @@ block body
       img(src='assets/img/shopify.png')
       img(src='assets/img/pinterest.png')
       img(src='assets/img/twitter.png')
+    // Modal
+  #exampleModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      .modal-content
+        .modal-header
+          h5#exampleModalLabel.modal-title Login
+           img(src='assets/img/Cyber Hawk Logo.png' alt='Cyber Hawk Logo' width='65' height='65') 
+          button.close(type='button' data-dismiss='modal' aria-label='Close')
+            span(aria-hidden='true') &times;
+        .modal-body
+          input.form-control(type='text' placeholder='Username' aria-label='Username' aria-describedby='basic-addon1')
+          input.form-control(type='text' placeholder='Password' aria-label='Password' aria-describedby='basic-addon2')
+        .modal-footer
+          button.btn.btn-primary(type='button' data-dismiss='modal') Login
+block append scripts 
+  script(src='/assets/js/App-Features-Carousel.js')
+
+
