@@ -14,7 +14,8 @@
     "mongoose": "^5.0.14",
     "morgan": "~1.9.0",
     "nodemailer": "^4.6.4",
-    "pug": "2.0.0-beta11"
+    "pug": "2.0.0-beta11",
+    "pug-mailer": "^1.0.1"
   },
   "devDependencies": {
     "chai": "^4.1.2",
