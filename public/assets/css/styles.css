@@ -9,8 +9,9 @@
   color: #003847 !important;
 }
 
-h2 {
+h3 {
   color: #495057 !important;
+  font-size: 1.70rem;
 }
 
 .card {
@@ -40,5 +41,19 @@ h2 {
 }
 
 .card .selected-success {
-    background: #21a9af63;
+  background: #21a9af63;
 }
+
+.card .selected-success .service-heading {
+  color: #003847 !important;
+}
+
+.card .selected-success p {
+  color: #018ca7 !important;
+}
+
+#estimate-result {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
