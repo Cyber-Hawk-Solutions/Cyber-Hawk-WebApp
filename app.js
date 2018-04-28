@@ -13,23 +13,15 @@ var passport = require('passport');
 var flash = require('connect-flash');
 var session = require('express-session');
 
-<<<<<<< HEAD
-var configDB = require('./config/database.js');
 
-//mongoose.connect(configDB.url);
-
-//var indexRouter = require('./routes/index');
-var route = require('./routes/route');
-=======
 // var indexRouter = require('./routes/index');
 var emailRouter = require('./routes/emails');
->>>>>>> 2232885ebe4aeb1d2333a31f8d8a4db7862cb06e
 
 var app = express();
 
 // view engine setup
 app.set('view engine', 'pug');
-app.set('views',  './views');
+app.set('views', './views');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -38,12 +30,14 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // required for passport
-/*
+
 app.use(session({ secret: 'cyberHawkEatEagle' })); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
-*/
+
+
+require('./config/passport')(passport); // pass passport for configuration
 
 //routes
 require('./routes/route.js')(app, passport); // load our routes and pass in our app and fully configured passport
@@ -56,10 +50,6 @@ app.get('/services', function(req, res) {
   res.render('services');
 });
 
-app.get('/dashboard', function(req, res) {
-  res.render('dashboard');
-});
-
 app.get('/app-estimate', function(req, res) {
   res.render('cost-estimator');
 });
@@ -68,40 +58,9 @@ app.get('/login', function(req, res) {
   res.render('login');
 });
 
-<<<<<<< HEAD
-app.get('/dashboard', isLoggedIn, function(req, res) {
-  res.render('dashboard', {
-      user : req.user // get the user out of session and pass to template
-  });
+app.get('/signup', function(req, res) {
+  res.render('signup');
 });
-
-// =====================================
-// LOGOUT ==============================
-// =====================================
-app.get('/logout', function(req, res) {
-  req.logout();
-  res.redirect('/');
-});
-//};
-
-// route middleware to make sure a user is logged in
-function isLoggedIn(req, res, next) {
-
-// if user is authenticated in the session, carry on 
-if (req.isAuthenticated())
-  return next();
-
-
-// if they aren't redirect them to the home page
-res.redirect('/login');
-}
-=======
-app.get('/pricing', function(req, res) {
-  res.render('pricing');
-});
-
-app.use('/email', emailRouter); 
->>>>>>> 2232885ebe4aeb1d2333a31f8d8a4db7862cb06e
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
