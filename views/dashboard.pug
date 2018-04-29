@@ -10,7 +10,7 @@ head
   link(rel='icon' type='image/png' sizes='16x16' href='assets/images/favicon.png')
   title Cyber Hawk | Dashboard
   // Bootstrap Core CSS
-  link(href='css/lib/bootstrap/bootstrap.min.css' rel='stylesheet')
+  link(href='assets/css/lib/bootstrap/bootstrap.min.css' rel='stylesheet')
   // Custom CSS
   link(href='/assets/css/lib/calendar2/semantic.ui.min.css' rel='stylesheet' type="text/css")
   link(href='/assets/css/lib/calendar2/pignose.calendar.min.css' rel='stylesheet' type="text/css")
@@ -34,15 +34,13 @@ head
     nav.navbar.top-navbar.navbar-expand-md.navbar-light
       // Logo
       .navbar-header
-        a.navbar-brand(href='index.html')
-          // Logo icon
-          b
-            img.dark-logo(src='assets/images/logo.png' alt='homepage')
-          // End Logo icon
-          // Logo text
-          span
-            img.dark-logo(src='assets/images/logo-text.png' alt='homepage')
-      // End Logo
+      a.navbar-brand(href='index.html')
+        // Logo icon
+        b
+        span
+         h5.m-b-20 CYBER HAWK INC.
+          img.dark-logo(src='assets/img/Cyber Hawk Logo.png' alt='Cyber Hawk Logo' width='50' height='50')
+        // End Logo icon
       .navbar-collapse
         // toggle and nav items
         ul.navbar-nav.mr-auto.mt-md-0
@@ -316,27 +314,6 @@ head
                 a(href='email-read.html') Read
               li
                 a(href='email-inbox.html') Inbox
-          li
-            a.has-arrow(href='#' aria-expanded='false')
-              i.fa.fa-bar-chart
-              span.hide-menu Charts
-            ul.collapse(aria-expanded='false')
-              li
-                a(href='chart-flot.html') Flot
-              li
-                a(href='chart-morris.html') Morris
-              li
-                a(href='chart-chartjs.html') ChartJs
-              li
-                a(href='chart-chartist.html') Chartist 
-              li
-                a(href='chart-amchart.html') AmChart
-              li
-                a(href='chart-echart.html') EChart
-              li
-                a(href='chart-sparkline.html') Sparkline
-              li
-                a(href='chart-peity.html') Peity
           li.nav-label Features
           li
             a.has-arrow(href='#' aria-expanded='false')
