@@ -42,6 +42,8 @@ require('./config/passport')(passport); // pass passport for configuration
 //routes
 require('./routes/route.js')(app, passport); // load our routes and pass in our app and fully configured passport
 
+app.use('/api/email', emailRouter);
+
 app.get('/', function(req, res) {
   res.render('index.pug');
 });
