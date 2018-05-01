@@ -79,23 +79,23 @@ app.post("/signup", function(req, res){
 app.get('/login', function(req, res) {
   res.render('login');
 });
-/*
+
 passport.use('local-login', new LocalStrategy({
   // by default, local strategy uses username and password, we will override with email
   usernameField : 'email',
   passwordField : 'password',
   passReqToCallback : true // allows us to pass back the entire request to the callback
-},
-*/
+}),
+
 
 // middleware
 app.post("/login", function(req,res){
-  console.log(req);
+  //console.log(req);
   passport.authenticate("local",{
     successRedirect:"/dashboard",
     failureRedirect:"/login"
   });
-});
+}));
 
 
 //require('./config/passport')(passport); // pass passport for configuration

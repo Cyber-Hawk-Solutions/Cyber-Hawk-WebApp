@@ -10,28 +10,23 @@ var User = require('../models/user');
 module.exports = function(passport) {
 
     // =========================================================================
-    // passport session setup ==================================================
+    // passport session setup ==================================================(
     // =========================================================================
     // required for persistent login sessions
-    // passport needs ability to serialize and unserialize users out of session
+    // passport needs ability to serialize and unserialize users out of session(
+    passport.use(new LocalStrategy(User.authenticate()));
 
     // used to serialize the user for the session
-    passport.serializeUser(function(user, done) {
-        done(null, user.id);
-    });
+    passport.serializeUser(User.serializeUser());
   
-    // used to deserialize the user
-    passport.deserializeUser(function(id, done) {
-        User.findById(id, function(err, user) {
-            done(err, user);
-        });
-    });
+    // used to deserialize the user(
+    passport.deserializeUser(User.deserializeUser());
 
     // =========================================================================
     // LOCAL SIGNUP ============================================================
     // =========================================================================
     // we are using named strategies since we have one for login and one for signup
-    // by default, if there was no name, it would just be called 'local'
+    // by default, if there was no name, it would just be called 'loc(al'(
 
     passport.use('local-signup', new LocalStrategy({
         // by default, local strategy uses username and password, we will override with email
