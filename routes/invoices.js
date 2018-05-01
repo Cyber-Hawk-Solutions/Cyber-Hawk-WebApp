@@ -8,13 +8,11 @@ let Invoice = require('../models/invoice');
 
 router.post('/', function(req, res, next) {
   let invoiceToSave = req.body;
-  if (req.body.userId != (null || undefined)){
-    invoiceToSave = new Invoice(invoiceToSave);
+  if (req.body.userId == (null || undefined)){
+    return console.error("userId missing.");
   }
-  else {
-    invoiceToSave = new Estiamte(invoiceToSave);
-  }
-
+  
+  invoiceToSave = new Invoice(invoiceToSave);
   invoiceToSave.save(function(err, invoice){
     res.send(invoice);
   });
@@ -27,12 +25,6 @@ router.get('/', function(req, res, next) {
   });
 });
 
-router.get('/estimate', function(req, res, next) {
-  Estiamte.find(function (err, estimates){
-    if (err) return console.error(err);
-    res.json(estimates);    
-  });
-});
 
 router.get('/:id', function(req, res, next) {
   Invoice.findOne({_id: req.params["id"]}, function (err, invoice){
@@ -42,28 +34,28 @@ router.get('/:id', function(req, res, next) {
 });
 
 router.get('/user/:userId', function(req, res, next) {
-  Invoice.findOne({userId: req.params["userId"]}, function (err, invoice){
-    if (err) return console.error(err);
-    res.send(book);
-  });
-});
-
-router.get('/email/:email', function(req, res, next) {
-  Invoice.findOne({email: req.params["email"]}, function (err, invoice){
+  Invoice.find({userId: req.params["userId"]}, function (err, invoice){
     if (err) return console.error(err);
     res.send(invoice);
   });
 });
 
+router.get('/email/:email', function(req, res, next) {
+  Invoice.find({email: req.params["email"]}, function (err, invoices){
+    if (err) return console.error(err);
+    res.send(invoices);
+  });
+});
+
 router.put('/:id', function(req, res, next) {
-  Book.findByIdAndUpdate({_id: req.params["id"]}, req.body, function(err, book) {
+  Invoice.findByIdAndUpdate({_id: req.params["id"]}, req.body, function(err, invoice) {
     if (err) return next(err);
     res.status(204).send();
   });
 }); 
 
 router.delete('/:id', function(req, res, next) {
-  Book.deleteOne({_id: req.params["id"]}, function(err, book) {
+  Invoice.deleteOne({_id: req.params["id"]}, function(err, invoice) {
     if (err) return next(err);
     res.status(204).send();
   });
