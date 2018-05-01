@@ -1,5 +1,9 @@
 "use strict";
 
+var User = require('../models/user');
+var Invoice = require('../models/invoice');
+
+
 module.exports = function(app, passport) {
 /*
   // =====================================
@@ -42,9 +46,14 @@ module.exports = function(app, passport) {
   // we will want this protected so you have to be logged in to visit
   // we will use route middleware to verify this (the isLoggedIn function)
   app.get('/dashboard', isLoggedIn, function(req, res) {
+
+    Invoice.find(function(err, invoices){
       res.render('dashboard', {
-          user : req.user // get the user out of session and pass to template
+        debug: true,
+        invoices: invoices,
+        user : req.user // get the user out of session and pass to template
       });
+    });
   });
 
   // =====================================

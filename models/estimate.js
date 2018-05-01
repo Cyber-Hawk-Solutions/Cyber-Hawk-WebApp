@@ -2,26 +2,27 @@
 
 let mongoose = require('mongoose');
 
-let InvoiceSchema = mongoose.Schema({
-    userId: String,
+let EstimateSchema = mongoose.Schema({
+    email: String,
     services: [],
     cost: Number,
     period: Number
 });
 
-InvoiceSchema.virtual('id').get(function(){
+EstimateSchema.virtual('id').get(function(){
     return this._id.toHexString();
   });
   
-  InvoiceSchema.set('toObject', {
+  EstimateSchema.set('toObject', {
     virtuals: true
   });
   
-  InvoiceSchema.methods.toJSON = function(){
+  EstimateSchema.methods.toJSON = function(){
     var obj = this.toObject();
     delete obj._id;
     delete obj.__v;
     return obj;
   }
   
-module.exports = mongoose.model('invoice', InvoiceSchema);
+
+module.exports = mongoose.model('estimate', EstimateSchema);
