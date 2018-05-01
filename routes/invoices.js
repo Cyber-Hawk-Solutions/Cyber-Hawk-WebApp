@@ -4,7 +4,7 @@ let mongoose = require('mongoose');
 let Estiamte = require('../models/estimate');
 let Invoice = require('../models/invoice');
 
-/* GET books listing. */
+/* GET invoices/estimates listing. */
 
 router.post('/', function(req, res, next) {
   let invoiceToSave = req.body;
@@ -21,16 +21,37 @@ router.post('/', function(req, res, next) {
 });
 
 router.get('/', function(req, res, next) {
-  Book.find(function (err, books){
+  Invoice.find(function (err, invoices){
     if (err) return console.error(err);
-    res.json(books);    
+    res.json(invoices);    
+  });
+});
+
+router.get('/estimate', function(req, res, next) {
+  Estiamte.find(function (err, estimates){
+    if (err) return console.error(err);
+    res.json(estimates);    
   });
 });
 
 router.get('/:id', function(req, res, next) {
-  Book.findOne({_id: req.params["id"]}, function (err, book){
+  Invoice.findOne({_id: req.params["id"]}, function (err, invoice){
+    if (err) return console.error(err);
+    res.send(invoice);
+  });
+});
+
+router.get('/user/:userId', function(req, res, next) {
+  Invoice.findOne({userId: req.params["userId"]}, function (err, invoice){
     if (err) return console.error(err);
     res.send(book);
+  });
+});
+
+router.get('/email/:email', function(req, res, next) {
+  Invoice.findOne({email: req.params["email"]}, function (err, invoice){
+    if (err) return console.error(err);
+    res.send(invoice);
   });
 });
 
