@@ -10,12 +10,17 @@ var mongoose = require('mongoose');
 var pug = require('pug');
 var port = process.env.PORT || 3000;
 var passport = require('passport');
+let LocalStrategy = require("passport-local");
+let passportLocalMongoose = require("passport-local-mongoose");
+let User = require('./models/user')
 var flash = require('connect-flash');
 var session = require('express-session');
-
+var db = require('./config/database.js');
 
 // var indexRouter = require('./routes/index');
 var emailRouter = require('./routes/emails');
+
+mongoose.connect("db.url");
 
 var app = express();
 
@@ -30,14 +35,63 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // required for passport
+//*********************************************
+app.use(require("express-session")({
+  secret: 'cyberHawkEatEagle', //session secret
+  resave: false,
+  saveUninitialized: false
+}));
 
-app.use(session({ secret: 'cyberHawkEatEagle' })); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
-require('./config/passport')(passport); // pass passport for configuration
+//handling user sign up
+app.get('/signup', function(req, res) {
+  res.render('signup');
+});
+
+app.post("/signup", function(req, res){
+  User.register(new User({username:req.body.username}),req.body.password, function(err, user){
+         if(err){
+              console.log(err);
+              return res.render('signup');
+          } //user stragety
+          passport.authenticate("local")(req, res, function(){
+              res.redirect("/dashboard"); //once the user sign up
+         }); 
+      });
+  });
+
+//************************************************
+
+//login route
+app.get('/login', function(req, res) {
+  res.render('login');
+});
+/*
+passport.use('local-login', new LocalStrategy({
+  // by default, local strategy uses username and password, we will override with email
+  usernameField : 'email',
+  passwordField : 'password',
+  passReqToCallback : true // allows us to pass back the entire request to the callback
+},
+*/
+
+// middleware
+app.post("/login", passport.authenticate("local",{
+  successRedirect:"/dashboard",
+  failureRedirect:"/login"
+}),function(req, res){
+  res.send("User is "+ req.user.id);
+});
+
+
+//require('./config/passport')(passport); // pass passport for configuration
 
 //routes
 require('./routes/route.js')(app, passport); // load our routes and pass in our app and fully configured passport
@@ -54,13 +108,6 @@ app.get('/app-estimate', function(req, res) {
   res.render('cost-estimator');
 });
 
-app.get('/login', function(req, res) {
-  res.render('login');
-});
-
-app.get('/signup', function(req, res) {
-  res.render('signup');
-});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
