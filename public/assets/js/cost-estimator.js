@@ -20,7 +20,7 @@ const servicePeriods = {
 };
 
 let selectedServices = {};
-let dayRate = 80;
+let dayRate = 100;
 
 $(document).ready(function(){
 
@@ -54,7 +54,7 @@ $(document).ready(function(){
     let email = getEstimateEmail();
     let estimate = getFullEstimate();
     estimate.email = email;
-    if (estimate.length < 0){
+    if (estimate.services.length > 0){
       $.post("api/email/estimate", estimate, function(res){
         if (res.isSent){
           showEmailSentMessage();

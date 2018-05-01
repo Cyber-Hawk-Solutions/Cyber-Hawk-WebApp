@@ -33,6 +33,22 @@ userSchema.methods.validPassword = function(password) {
     return bcrypt.compareSync(password, this.local.password);
 };
 
+userSchema.virtual('id').get(function(){
+    return this._id.toHexString();
+  });
+  
+userSchema.set('toObject', {
+virtuals: true
+});
+
+userSchema.methods.toJSON = function(){
+var obj = this.toObject();
+delete obj._id;
+delete obj.__v;
+return obj;
+}
+  
+
 // create the model for users and expose it to our app
 module.exports = mongoose.model('User', userSchema);
 

@@ -13,9 +13,15 @@ var passport = require('passport');
 var flash = require('connect-flash');
 var session = require('express-session');
 
+//Config
+var database = require('./config/database.js')
 
-// var indexRouter = require('./routes/index');
+mongoose.connect(database.url);
+
+
+//Routes
 var emailRouter = require('./routes/emails');
+var invoiceRouter = require('./routes/invoices');
 
 var app = express();
 
@@ -43,6 +49,8 @@ require('./config/passport')(passport); // pass passport for configuration
 require('./routes/route.js')(app, passport); // load our routes and pass in our app and fully configured passport
 
 app.use('/api/email', emailRouter);
+app.use('/api/invoice', invoiceRouter);
+
 
 app.get('/', function(req, res) {
   res.render('index.pug');
