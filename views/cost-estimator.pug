@@ -142,7 +142,7 @@ block content
               span.fa-stack.fa-4x(style='font-size:50px;')
                 i.fa.fa-circle.fa-stack-2x.text-primary-dark
                 i.fa.fa-user.fa-stack-1x.fa-inverse
-              h4.service-heading(style='color:#333333;') Display of mad data/ Geolocation
+              h4.service-heading(style='color:#333333;') Display of map data/ Geolocation
               p.text-muted Display a map with data points.
     //- section
     //-   h2 Network Setup/ Maintenance 
@@ -159,9 +159,22 @@ block content
 block post-content
   section#estimate-result
       .container
-        .row 
-          h2 Total Cost: 
-            span#total-cost 0
         .row
-          h3 Developer Days:
-            span#developer-days 0
+          .col.col-md-6
+            .row
+              h2
+                | Total Cost: 
+                span#total-cost 0
+            .row
+              h3
+                | Developer Days:
+                span#developer-days 0
+          .col.col-md-6.col-sm-12
+            .row
+              .input-group.mb-3
+                input#estimate-email.form-control(type='text' placeholder='Email Address' aria-label='Email Address' aria-describedby='basic-addon2')
+                .input-group-append
+                  button#send-estimate.btn.btn-primary(type='button') Send Me The Estimate
+            .row
+              p#email-sent-message.text-success.hidden Estimate sent.
+              p#email-sent-message.text-danger.hidden Estimate failed to send - is the email valid?

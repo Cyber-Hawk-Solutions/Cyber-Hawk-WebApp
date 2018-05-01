@@ -5,6 +5,16 @@ head
   title Thank you for your order!
   style(media='all' type='text/css').
     @media all {
+    h3 {
+      color: black !important;
+    }
+    .service {
+      text-transform: capitalize !important;
+      color: black !important;
+    }
+    .text-center {
+      text-align: center;
+    }
     .btn-primary table td:hover {
     background-color: #34495e !important;
     }
@@ -15,8 +25,20 @@ head
     }
     @media all {
     .btn-secondary a:hover {
-    border-color: #34495e !important;
-    color: #34495e !important;
+      border-color: #34495e !important;
+      color: #34495e !important;
+    }
+    .main-button {
+      background-image: linear-gradient(#018ca7, #018ca7 50%, #018ca7) !important;
+    }
+    .main-button:hover {
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#018ca7), color-stop(50%, #037e96), to(#025f71)) !important;
+      background-image: linear-gradient(#018ca7, #037e96 50%, #025f71 ) !important;
+    }
+    .main-button::active {
+      color: #fff;
+      background-color: #046072 !important;
+      border-color: #055a6b !important;
     }
     }
     @media only screen and (max-width: 620px) {
@@ -111,8 +133,8 @@ table.body(border='0' cellpadding='0' cellspacing='0' style='border-collapse: se
       .content(style='box-sizing: border-box; display: block; Margin: 0 auto; max-width: 580px; padding: 10px;')
         // START CENTERED WHITE CONTAINER
         span.preheader(style='color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;')
-          title Thank you for your order!
-        table.main(style='border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background: #fff; border-radius: 3px;' width='100%')
+          title Project Estimate
+        table.main(style='color:#1f6e84; border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background: #fff; border-radius: 3px;' width='100%')
           // START MAIN CONTENT AREA
           tr
             td.wrapper(style='font-family: sans-serif; font-size: 14px; vertical-align: top; box-sizing: border-box; padding: 20px;' valign='top')
@@ -120,9 +142,22 @@ table.body(border='0' cellpadding='0' cellspacing='0' style='border-collapse: se
                 tr
                   td(style='font-family: sans-serif; font-size: 14px; vertical-align: top;' valign='top')
                     h1(style='font-family: sans-serif; font-size: 24px; font-weight: bold; margin: 0; Margin-bottom: 15px;')
-                      | Thank you for your order
+                      | Project Estimate
+                    table
+                      thead
+                        tr
+                          th(scope='col') Task
+                          th(scope='col') Period (Days)
+                      tbody
+                        each service in estimate.services
+                          tr
+                            td.service= service.title
+                            td.service.text-center= service.period
+                    h3(style="color: black !important;")
+                      | Total Cost: $#{estimate.cost} XCD
+                    h3(style="color: black !important;")
+                      | Project Period: #{estimate.period} days
                     p(style='font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;')
-                      | We received your order and we will notify you as soon as we process it. As a reminder, the order total is
                     table.btn.btn-primary(border='0' cellpadding='0' cellspacing='0' style='border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; box-sizing: border-box;' width='100%')
                       tbody
                         tr
@@ -131,8 +166,8 @@ table.body(border='0' cellpadding='0' cellspacing='0' style='border-collapse: se
                               tbody
                                 tr
                                   td(style='font-family: sans-serif; font-size: 14px; vertical-align: top; background-color: #3498db; border-radius: 5px; text-align: center;' valign='top' bgcolor='#3498db' align='center')
-                                    a(href='https://weird-store-xxx.herokuapp.com' target='_blank' style='display: inline-block; color: #ffffff; background-color: #3498db; border: solid 1px #3498db; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize; border-color: #3498db;') Visit our website
-                    p(style='font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;') See you soon!
+                                    a.main-btn(href='https://cyberhawk.herokuapp.com' target='_blank' style='display: inline-block; color: #ffffff; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize;') Visit our website
+                    p(style='color: #1f6e84; font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;') We're happy to serve you!
           // END MAIN CONTENT AREA
         // START FOOTER
         .footer(style='clear: both; padding-top: 10px; text-align: center; width: 100%;')
@@ -140,7 +175,7 @@ table.body(border='0' cellpadding='0' cellspacing='0' style='border-collapse: se
             tr
               td.content-block.powered-by(style='font-family: sans-serif; vertical-align: top; padding-top: 10px; padding-bottom: 10px; font-size: 12px; color: #999999; text-align: center;' valign='top' align='center')
                 | Powered by 
-                a(href='https://www.marketcloud.it' style='color: #999999; font-size: 12px; text-align: center; text-decoration: none;') Cyber Hawk Inc.
+                a(href='https://www.marketcloud.it' style='color: #999999; font-size: 12px; text-align: center; text-decoration: none;') Cyber Hawk Inc
                 | .
         // END FOOTER
         // END CENTERED WHITE CONTAINER

@@ -15,12 +15,18 @@ let passportLocalMongoose = require("passport-local-mongoose");
 let User = require('./models/user')
 var flash = require('connect-flash');
 var session = require('express-session');
-var db = require('./config/database.js');
 
-// var indexRouter = require('./routes/index');
+//Config
+var database = require('./config/database.js')
+
+mongoose.connect(database.url);
+
+
+//Routes
 var emailRouter = require('./routes/emails');
+var invoiceRouter = require('./routes/invoices');
 
-mongoose.connect("db.url");
+mongoose.connect(database.url);
 
 var app = express();
 
@@ -83,11 +89,12 @@ passport.use('local-login', new LocalStrategy({
 */
 
 // middleware
-app.post("/login", passport.authenticate("local",{
-  successRedirect:"/dashboard",
-  failureRedirect:"/login"
-}),function(req, res){
-  res.send("User is "+ req.user.id);
+app.post("/login", function(req,res){
+  console.log(req);
+  passport.authenticate("local",{
+    successRedirect:"/dashboard",
+    failureRedirect:"/login"
+  });
 });
 
 
@@ -95,6 +102,10 @@ app.post("/login", passport.authenticate("local",{
 
 //routes
 require('./routes/route.js')(app, passport); // load our routes and pass in our app and fully configured passport
+
+app.use('/api/email', emailRouter);
+app.use('/api/invoice', invoiceRouter);
+
 
 app.get('/', function(req, res) {
   res.render('index.pug');

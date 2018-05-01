@@ -1,4 +1,5 @@
-// app/routes.js
+"use strict";
+
 module.exports = function(app, passport) {
 /*
   // =====================================

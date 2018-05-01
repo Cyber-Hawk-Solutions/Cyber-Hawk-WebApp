@@ -23,8 +23,8 @@
 
 @media (min-width:768px) {
   .header-blue .navbar {
-    padding-top:1rem;
-    padding-bottom:1rem;
+    padding-top:0rem;
+    padding-bottom:0rem;
   }
 }
 

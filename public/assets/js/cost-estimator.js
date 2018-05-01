@@ -20,7 +20,7 @@ const servicePeriods = {
 };
 
 let selectedServices = {};
-let dayRate = 80;
+let dayRate = 100;
 
 $(document).ready(function(){
 
@@ -31,6 +31,10 @@ $(document).ready(function(){
     toggleItemSelection(this);    
     setTotalCost(calculateTotalCost(selectedServices, dayRate));
     setTotalPeriod(calculateTotalPeriod(selectedServices));
+  });
+
+  $("#send-estimate").click(function (e){
+    sendEstimate();
   });
 
   function toggleItemSelection(item){
@@ -46,9 +50,49 @@ $(document).ready(function(){
 
   }
 
+  function sendEstimate(){
+    let email = getEstimateEmail();
+    let estimate = getFullEstimate();
+    estimate.email = email;
+    if (estimate.services.length > 0){
+      $.post("api/email/estimate", estimate, function(res){
+        if (res.isSent){
+          showEmailSentMessage();
+        }
+        else {
+          showEmailFailedMessage();
+        }
+      });
+    }
+  }
+
+  function getFullEstimate(){
+    let services = getSelectServicesList(selectedServices);
+    let cost = calculateTotalCost(selectedServices, dayRate);
+    let period = calculateTotalPeriod(selectedServices);
+    let estimate = {
+      "services": services,
+      "cost": cost,
+      "period": period
+    }
+
+    return estimate;
+  }
+
   function addServiceToEstimate(serviceItem){
     selectedServices[serviceItem.title] = serviceItem;
   }
+
+  function getSelectServicesList(serviceItems){
+    let serviceList = [];
+
+    for (let service in serviceItems) { 
+      serviceList.push(serviceItems[service])
+    };
+
+    return serviceList;
+  }
+
   function removeServiceFromEstimate(serviceItem){
     delete selectedServices[serviceItem.title];
   }
@@ -56,6 +100,7 @@ $(document).ready(function(){
   function getServiceItem(serviceTitle){
     return servicePeriods[serviceTitle];
   }
+
   function calculateTotalCost(services, dayRate){
     let totalCost = (calculateTotalPeriod(services)) * dayRate;
     return totalCost;
@@ -77,5 +122,26 @@ $(document).ready(function(){
   function setTotalPeriod(period){
     $("#developer-days")[0].innerText = period;
   }
+
+  function getEstimateEmail(){
+    return ($("#estimate-email")[0].value).trim();
+  }
+
+  function showEmailSentMessage(){
+    $("#email-sent-message").innerText = "Estimate sent";
+    $("#email-sent-message").removeClass("hidden");
+  }
+
+  function showEmailSentMessage(){
+    $("#email-sent-message.text-success").removeClass("hidden");
+    $("#email-sent-message.text-danger").addClass("hidden");
+  }
+
+  function showEmailFailedMessage(){
+    $("#email-sent-message.text-danger").removeClass("hidden");
+    $("#email-sent-message.text-success").addClass("hidden");
+
+  }
+
 })();
 });
