@@ -1,8 +1,8 @@
 extends layout.pug
 
 block body
-  main.container
-    .row
+  main.container.h-100
+    .row.align-items-center.justify-content-center.w-100.h-75
       .col-md-6.col-md-offset-3
         h1.display-4.m-b-2 Log In
         form(method='POST' action='/login')
