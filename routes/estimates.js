@@ -7,8 +7,8 @@ let Estimate = require('../models/estimate');
 
 router.post('/', function(req, res, next) {
   let estimateToSave = req.body;
-  if (req.body.userId == (null || undefined)){
-    return console.error("userId missing.");
+  if (req.body.email == (null || undefined)){
+    return console.error("email missing.");
   }
   
   estimateToSave = new Estimate(estimateToSave);
