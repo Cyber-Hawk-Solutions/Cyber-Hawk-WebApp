@@ -8,17 +8,15 @@ block body
   div
     nav.navbar.navbar-light.navbar-expand-md.navigation-clean-button(style='background-color:#013644;')
       .container
-        img(src='assets/img/Cyber Hawk Logo.png' alt='Cyber Hawk Logo' width='75' height='75' href='')
+        img(src='assets/img/Cyber Hawk Logo.png' alt='Cyber Hawk Logo' width='75' height='75' href='/index')
         a.navbar-brand(href='' style='color:#ffffff;') Cyber Hawk
         button.navbar-toggler(data-toggle='collapse' data-target='#navcol-1')
           span.sr-only Toggle navigation
           span.navbar-toggler-icon
         #navcol-1.collapse.navbar-collapse
           ul.nav.navbar-nav.mr-auto
-            li.nav-item(role='presentation')
-              a.nav-link.active(href='/services' style='color:#dddddd;') Services
               li.nav-item(role='presentation')
-              a.nav-link.active(href='/pricing' style='color:#dddddd;') Pricing
+              a.nav-link.active(href='/app-estimate' style='color:#dddddd;') Pricing
           if !user
             span.navbar-text.actions
               a.login(href='login' style='color:#dddddd;') Log In
@@ -58,15 +56,13 @@ block body
               h3 About
               ul
                 li
-                  a(href='#') Company
+                  a(href='/about') Company
                 li
                   a(href='#') Team
-                li
-                  a(href='#') Careers
             .col-md-6.item.text
-              h3 Company Name
+              h3 Contact Us
               p
-                | Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.
+                | 1(268)480-2420
             .col.item.social
               a(href='#')
                 i.icon.ion-social-facebook
@@ -76,4 +72,4 @@ block body
                 i.icon.ion-social-snapchat
               a(href='#')
                 i.icon.ion-social-instagram
-          p.copyright Company Name &copy; 2017
+          p.copyright Cyber Hawk Inc. &copy; 2018
