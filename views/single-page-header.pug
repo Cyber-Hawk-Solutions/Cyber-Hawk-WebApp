@@ -9,7 +9,7 @@ block body
     nav.navbar.navbar-light.navbar-expand-md.navigation-clean-button(style='background-color:#013644;')
       .container
         img(src='assets/img/Cyber Hawk Logo.png' alt='Cyber Hawk Logo' width='75' height='75' href='/index')
-        a.navbar-brand(href='' style='color:#ffffff;') Cyber Hawk
+        a.navbar-brand(href='/' style='color:#ffffff;') Cyber Hawk
         button.navbar-toggler(data-toggle='collapse' data-target='#navcol-1')
           span.sr-only Toggle navigation
           span.navbar-toggler-icon
@@ -17,18 +17,12 @@ block body
           ul.nav.navbar-nav.mr-auto
               li.nav-item(role='presentation')
               a.nav-link.active(href='/app-estimate' style='color:#dddddd;') Pricing
-<<<<<<< HEAD
-          span.navbar-text.actions
-            a.login(href='login.pug' style='color:#dddddd;') Log In
-            a.btn.btn-light.action-button(role='button' href='signup' style='background-color:#018ca7;') Sign Up
-=======
           if !user
             span.navbar-text.actions
               a.login(href='login' style='color:#dddddd;') Log In
               a.btn.btn-light.action-button(role='button' href='signup' style='background-color:#018ca7;') Sign Up
           else
             a.dashboard-link.btn.btn-outline-light(href='dashboard' style='color:#dddddd;') Dashboard
->>>>>>> 42d071647c8b80eb4c219bb01aa294167fbabf2a
   div.parallax-header
     div.d-flex.justify-content-center(data-bs-parallax-bg='true' style='height:165px;background-image:url(https://unsplash.it/1800/900?image=1051);background-position:center;background-size:cover;')
       h1.align-self-center.text-center.text-light 

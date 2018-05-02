@@ -22,7 +22,7 @@ router.get('/', function(req, res, next) {
   Invoice.find(function (err, invoices){
     if (err) return console.error(err);
     res.json(invoices);    
-  }).sort('ascending');
+  });
 });
 
 
@@ -37,14 +37,14 @@ router.get('/user/:userId', function(req, res, next) {
   Invoice.find({userId: req.params["userId"]}, function (err, invoice){
     if (err) return console.error(err);
     res.send(invoice);
-  }).sort('ascending');
+  });
 });
 
 router.get('/email/:email', function(req, res, next) {
   Invoice.find({email: req.params["email"]}, function (err, invoices){
     if (err) return console.error(err);
     res.send(invoices);
-  }).sort('ascending');
+  });
 });
 
 router.put('/:id', function(req, res, next) {
