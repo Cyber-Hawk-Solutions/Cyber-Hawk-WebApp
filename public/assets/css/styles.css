@@ -30,6 +30,12 @@ h3 {
   border-color: #055a6b;
 }
 
+.btn-outline-light:hover {
+  color: #2d2d2d;
+  background-color: #f8f9fa54;
+  border-color: #f8f9fa;
+}
+
 .card {
   background-color: rgba(248,249,250,0.5);
 }
@@ -77,3 +83,6 @@ h3 {
   display: none !important;
 }
 
+#save-estimate {
+  margin-bottom: 15px;
+}
