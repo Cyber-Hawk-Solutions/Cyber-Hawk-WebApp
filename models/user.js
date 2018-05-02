@@ -8,10 +8,9 @@ var passportLocalMongoose = require("passport-local-mongoose");
 
 // define the schema for our user model
 var UserSchema = new mongoose.Schema({
-    local:{
-     username:String,    
-     password:String
-    }
+    username:String,    
+    password:String
+    
 }); 
 
 UserSchema.plugin(passportLocalMongoose);  

@@ -6921,3 +6921,8 @@ tbody tr td:last-child {
     display: inline-block !important;
   }
 }
+
+
+span.username {
+  padding-right: 15px;
+}

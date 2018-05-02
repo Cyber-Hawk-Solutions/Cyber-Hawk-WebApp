@@ -21,18 +21,18 @@ var database = require('./config/database.js')
 
 mongoose.connect(database.url);
 
-
 //Routes
 var emailRouter = require('./routes/emails');
 var invoiceRouter = require('./routes/invoices');
-
-mongoose.connect(database.url);
+var estimateRouter = require('./routes/estimates');
 
 var app = express();
 
 // view engine setup
 app.set('view engine', 'pug');
 app.set('views', './views');
+app.set('view options', { debug: true })
+
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -63,15 +63,15 @@ app.get('/signup', function(req, res) {
 
 app.post("/signup", function(req, res){
   User.register(new User({username:req.body.username}),req.body.password, function(err, user){
-         if(err){
-              console.log(err);
-              return res.render('signup');
-          } //user stragety
-          passport.authenticate("local")(req, res, function(){
-              res.redirect("/dashboard"); //once the user sign up
-         }); 
-      });
+    if(err){
+      console.log(err);
+      return res.render('signup');
+    } //user stragety
+    passport.authenticate("local")(req, res, function(){
+        res.redirect("/dashboard"); //once the user sign up
+    }); 
   });
+});
 
 //************************************************
 
@@ -80,22 +80,23 @@ app.get('/login', function(req, res) {
   res.render('login');
 });
 
+/*
 passport.use('local-login', new LocalStrategy({
   // by default, local strategy uses username and password, we will override with email
   usernameField : 'email',
   passwordField : 'password',
   passReqToCallback : true // allows us to pass back the entire request to the callback
 }),
-
+*/
 
 // middleware
 app.post("/login", function(req,res){
-  //console.log(req);
-  passport.authenticate("local",{
-    successRedirect:"/dashboard",
-    failureRedirect:"/login"
-  });
-}));
+  console.log(reindex.pugq.body);
+  passport.authenticate('local')(req, res, function(){
+    res.redirect("/dashboard"); //once the user sign up
+    console.log(res);
+  }); 
+});
 
 
 //require('./config/passport')(passport); // pass passport for configuration
@@ -105,6 +106,7 @@ require('./routes/route.js')(app, passport); // load our routes and pass in our 
 
 app.use('/api/email', emailRouter);
 app.use('/api/invoice', invoiceRouter);
+app.use('/api/estimate', estimateRouter);
 
 
 app.get('/', function(req, res) {
@@ -118,6 +120,12 @@ app.get('/services', function(req, res) {
 app.get('/app-estimate', function(req, res) {
   res.render('cost-estimator');
 });
+
+//The 404 Route (ALWAYS Keep this as the last route)
+app.use(function (req, res, next) {
+  res.status(404);
+  res.render('index.pug');
+})
 
 
 // catch 404 and forward to error handler

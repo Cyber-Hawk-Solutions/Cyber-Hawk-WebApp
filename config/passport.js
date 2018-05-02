@@ -4,7 +4,7 @@
 var LocalStrategy = require('passport-local').Strategy;
 
 // load up the user model
-var User = require('../models/user');
+var User = require('../models/User');
 
 // expose this function to our app using module.exports
 module.exports = function(passport) {
@@ -16,11 +16,22 @@ module.exports = function(passport) {
     // passport needs ability to serialize and unserialize users out of session(
     passport.use(new LocalStrategy(User.authenticate()));
 
+    passport.use(new LocalStrategy(User.authenticate()));
+
+    passport.use(new LocalStrategy(
+        {usernameField:"username", passwordField:"password"},
+        function(username, password, done) {
+            return done(null, false, {message:'Unable to login'})
+        }
+    ));
+
     // used to serialize the user for the session
     passport.serializeUser(User.serializeUser());
+
   
-    // used to deserialize the user(
+    // used to deserialize the user
     passport.deserializeUser(User.deserializeUser());
+
 
     // =========================================================================
     // LOCAL SIGNUP ============================================================

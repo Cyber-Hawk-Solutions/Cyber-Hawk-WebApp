@@ -1,0 +1,640 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  // Tell the browser to be responsive to screen width
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  meta(name='description' content='')
+  meta(name='author' content='')
+  // Favicon icon
+  link(rel='icon' type='image/png' sizes='16x16' href='images/favicon.png')
+  title Cyber Hawk Inc.
+  // Bootstrap Core CSS
+  link(href='css/lib/bootstrap/bootstrap.min.css' rel='stylesheet')
+  // Custom CSS
+  link(href='css/helper.css' rel='stylesheet')
+  link(href='css/style.css' rel='stylesheet')
+  // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+  // WARNING: Respond.js doesn't work if you view the page via file:**
+  //if lt IE 9
+    script(src='assets/https:**oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+    script(src='assets/https:**oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+// Preloader - style you can find in spinners.css
+.preloader
+  svg.circular(viewbox='25 25 50 50')
+    circle.path(cx='50' cy='50' r='20' fill='none' stroke-width='2' stroke-miterlimit='10')
+// Main wrapper
+#main-wrapper
+  .header
+    nav.navbar.top-navbar.navbar-expand-md.navbar-light
+      // Logo
+      .navbar-header
+        a.navbar-brand(href='index.html')
+          // Logo icon
+          b
+            img.dark-logo(src='images/logo.png' alt='homepage')
+          // End Logo icon
+          // Logo text
+          span
+            img.dark-logo(src='images/logo-text.png' alt='homepage')
+      // End Logo
+      .navbar-collapse
+        // toggle and nav items
+        ul.navbar-nav.mr-auto.mt-md-0
+          // This is
+          li.nav-item
+            a.nav-link.nav-toggler.hidden-md-up.text-muted(href='javascript:void(0)')
+              i.mdi.mdi-menu
+          li.nav-item.m-l-10
+            a.nav-link.sidebartoggler.hidden-sm-down.text-muted(href='javascript:void(0)')
+              i.ti-menu
+          // Search
+          li.nav-item.hidden-sm-down.search-box
+            a.nav-link.hidden-sm-down.text-muted(href='javascript:void(0)')
+              i.ti-search
+            form.app-search
+              input.form-control(type='text' placeholder='Search here')
+              a.srh-btn
+                i.ti-close
+          // Language
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle.text-muted(href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+              i.flag-icon.flag-icon-us
+            .dropdown-menu.animated.zoomIn
+              a.dropdown-item(href='#')
+                i.flag-icon.flag-icon-ca
+                |  Canada
+              a.dropdown-item(href='#')
+                i.flag-icon.flag-icon-fr
+                |  French
+              a.dropdown-item(href='#')
+                i.flag-icon.flag-icon-cn
+                |  China
+              a.dropdown-item(href='#')
+                i.flag-icon.flag-icon-de
+                |  Dutch
+          // Messages
+          li.nav-item.dropdown.mega-dropdown
+            a.nav-link.dropdown-toggle.text-muted(href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+              i.fa.fa-th-large
+            .dropdown-menu.animated.zoomIn
+              ul.mega-dropdown-menu.row
+                li.col-lg-3.m-b-30
+                  h4.m-b-20 CONTACT US
+                  // Contact
+                  form
+                    .form-group
+                      input#exampleInputname1.form-control(type='text' placeholder='Enter Name')
+                    .form-group
+                      input.form-control(type='email' placeholder='Enter email')
+                    .form-group
+                      textarea#exampleTextarea.form-control(rows='3' placeholder='Message')
+                    button.btn.btn-info(type='submit') Submit
+                li.col-lg-3.col-xlg-3.m-b-30
+                  h4.m-b-20 List style
+                  // List style
+                  ul.list-style-none
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                li.col-lg-3.col-xlg-3.m-b-30
+                  h4.m-b-20 List style
+                  // List style
+                  ul.list-style-none
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                li.col-lg-3.col-xlg-3.m-b-30
+                  h4.m-b-20 List style
+                  // List style
+                  ul.list-style-none
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+          // End Messages
+        // User profile and search
+        ul.navbar-nav.my-lg-0
+          // Comment
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle.text-muted.text-muted(href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+              i.fa.fa-bell
+              .notify
+                span.heartbit
+                span.point
+            .dropdown-menu.dropdown-menu-right.mailbox.animated.zoomIn
+              ul
+                li
+                  .drop-title Notifications
+                li
+                  .message-center
+                    // Message
+                    a(href='#')
+                      .btn.btn-danger.btn-circle.m-r-10
+                        i.fa.fa-link
+                      .mail-contnet
+                        h5 This is title
+                        span.mail-desc Just see the my new admin!
+                        span.time 9:30 AM
+                    // Message
+                    a(href='#')
+                      .btn.btn-success.btn-circle.m-r-10
+                        i.ti-calendar
+                      .mail-contnet
+                        h5 This is another title
+                        span.mail-desc Just a reminder that you have event
+                        span.time 9:10 AM
+                    // Message
+                    a(href='#')
+                      .btn.btn-info.btn-circle.m-r-10
+                        i.ti-settings
+                      .mail-contnet
+                        h5 This is title
+                        span.mail-desc You can customize this template as you want
+                        span.time 9:08 AM
+                    // Message
+                    a(href='#')
+                      .btn.btn-primary.btn-circle.m-r-10
+                        i.ti-user
+                      .mail-contnet
+                        h5 This is another title
+                        span.mail-desc Just see the my admin!
+                        span.time 9:02 AM
+                li
+                  a.nav-link.text-center(href='javascript:void(0);')
+                    strong Check all notifications
+                    i.fa.fa-angle-right
+          // End Comment
+          // Messages
+          li.nav-item.dropdown
+            a#2.nav-link.dropdown-toggle.text-muted(href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+              i.fa.fa-envelope
+              .notify
+                span.heartbit
+                span.point
+            .dropdown-menu.dropdown-menu-right.mailbox.animated.zoomIn(aria-labelledby='2')
+              ul
+                li
+                  .drop-title You have 4 new messages
+                li
+                  .message-center
+                    // Message
+                    a(href='#')
+                      .user-img
+                        img.img-circle(src='images/users/5.jpg' alt='user')
+                        span.profile-status.online.pull-right
+                      .mail-contnet
+                        h5 Michael Qin
+                        span.mail-desc Just see the my admin!
+                        span.time 9:30 AM
+                    // Message
+                    a(href='#')
+                      .user-img
+                        img.img-circle(src='images/users/2.jpg' alt='user')
+                        span.profile-status.busy.pull-right
+                      .mail-contnet
+                        h5 John Doe
+                        span.mail-desc I&apos;ve sung a song! See you at
+                        span.time 9:10 AM
+                    // Message
+                    a(href='#')
+                      .user-img
+                        img.img-circle(src='images/users/3.jpg' alt='user')
+                        span.profile-status.away.pull-right
+                      .mail-contnet
+                        h5 Mr. John
+                        span.mail-desc I am a singer!
+                        span.time 9:08 AM
+                    // Message
+                    a(href='#')
+                      .user-img
+                        img.img-circle(src='images/users/4.jpg' alt='user')
+                        span.profile-status.offline.pull-right
+                      .mail-contnet
+                        h5 Michael Qin
+                        span.mail-desc Just see the my admin!
+                        span.time 9:02 AM
+                li
+                  a.nav-link.text-center(href='javascript:void(0);')
+                    strong See all e-Mails
+                    i.fa.fa-angle-right
+          // End Messages
+          // Profile
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle.text-muted(href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+              img.profile-pic(src='images/users/5.jpg' alt='user')
+            .dropdown-menu.dropdown-menu-right.animated.zoomIn
+              ul.dropdown-user
+                li
+                  a(href='#')
+                    i.ti-user
+                    |  Profile
+                li
+                  a(href='#')
+                    i.ti-wallet
+                    |  Balance
+                li
+                  a(href='#')
+                    i.ti-email
+                    |  Inbox
+                li.divider(role='separator')
+                li
+                  a(href='#')
+                    i.ti-settings
+                    |  Setting
+                li.divider(role='separator')
+                li
+                  a(href='#')
+                    i.fa.fa-power-off
+                    |  Logout
+  // End header header
+  // Left Sidebar
+  .left-sidebar
+    // Sidebar scroll
+    .scroll-sidebar
+      // Sidebar navigation
+      nav.sidebar-nav
+        ul#sidebarnav
+          li.nav-devider
+          li.nav-label Home
+          li
+            a.has-arrow(href='#' aria-expanded='false')
+              i.fa.fa-tachometer
+              span.hide-menu
+                | Dashboard 
+                span.label.label-rouded.label-primary.pull-right 3
+            ul.collapse(aria-expanded='false')
+              li
+                a(href='index.html') Dashboard 1 
+              li
+                a(href='index1.html') Dashboard 2 
+              li
+                a(href='index2.html') Dashboard 3 
+          li.nav-label Layout
+          li
+            a.has-arrow(href='#' aria-expanded='false')
+              i.fa.fa-columns
+              span.hide-menu Layout
+            ul.collapse(aria-expanded='false')
+              li
+                a(href='layout-blank.html') Blank
+              li
+                a(href='layout-boxed.html') Boxed
+              li
+                a(href='layout-fix-header.html') Fix Header
+              li
+                a(href='layout-fix-sidebar.html') Fix Sidebar
+          li.nav-label Apps &amp; Charts
+          li
+            a.has-arrow(href='#' aria-expanded='false')
+              i.fa.fa-envelope
+              span.hide-menu Mailbox
+            ul.collapse(aria-expanded='false')
+              li
+                a(href='email-compose.html') Compose
+              li
+                a(href='email-read.html') Read
+              li
+                a(href='email-inbox.html') Inbox
+          li
+            a.has-arrow(href='#' aria-expanded='false')
+              i.fa.fa-bar-chart
+              span.hide-menu Charts
+            ul.collapse(aria-expanded='false')
+              li
+                a(href='chart-flot.html') Flot
+              li
+                a(href='chart-morris.html') Morris
+              li
+                a(href='chart-chartjs.html') ChartJs
+              li
+                a(href='chart-chartist.html') Chartist 
+              li
+                a(href='chart-amchart.html') AmChart
+              li
+                a(href='chart-echart.html') EChart
+              li
+                a(href='chart-sparkline.html') Sparkline
+              li
+                a(href='chart-peity.html') Peity
+          li
+            a(href='app-profile.html' aria-expanded='false')
+              i.fa.fa-user
+              span.hide-menu Profile
+          li.nav-label Features
+          li
+            a.has-arrow(href='#' aria-expanded='false')
+              i.fa.fa-suitcase
+              span.hide-menu
+                | Ui Elements 
+                span.label.label-rouded.label-danger.pull-right 12
+            ul.collapse(aria-expanded='false')
+              li
+                a(href='ui-alert.html') Alert
+              li
+                a(href='ui-button.html') Button
+              li
+                a(href='ui-dropdown.html') Dropdown
+              li
+                a(href='ui-progressbar.html') Progressbar
+              li
+                a(href='ui-tab.html') Tab
+              li
+                a(href='ui-typography.html') Typography
+              li
+                a(href='uc-calender.html') Calender
+              li
+                a(href='uc-datamap.html') Datamap
+              li
+                a(href='uc-nestedable.html') Nestedable
+              li
+                a(href='uc-sweetalert.html') Sweetalert
+              li
+                a(href='uc-toastr.html') Toastr
+              li
+                a(href='uc-weather.html') Weather
+          li
+            a.has-arrow(href='#' aria-expanded='false')
+              i.fa.fa-wpforms
+              span.hide-menu Forms
+            ul.collapse(aria-expanded='false')
+              li
+                a(href='form-basic.html') Basic Forms
+              li
+                a(href='form-layout.html') Form Layout
+              li
+                a(href='form-validation.html') Form Validation
+              li
+                a(href='form-editor.html') Editor
+              li
+                a(href='form-dropzone.html') Dropzone
+          li
+            a.has-arrow(href='#' aria-expanded='false')
+              i.fa.fa-table
+              span.hide-menu Tables
+            ul.collapse(aria-expanded='false')
+              li
+                a(href='table-bootstrap.html') Basic Tables
+              li
+                a(href='table-datatable.html') Data Tables
+          li
+            a.has-arrow(href='#' aria-expanded='false')
+              i.fa.fa-th-large
+              span.hide-menu Widgets
+            ul.collapse(aria-expanded='false')
+              li
+                a(href='widget.html') Widgets
+          li.nav-label EXTRA
+          li
+            a.has-arrow(href='#' aria-expanded='false')
+              i.fa.fa-book
+              span.hide-menu
+                | Sample Pages 
+                span.label.label-rouded.label-success.pull-right 25
+            ul.collapse(aria-expanded='false')
+              li
+                a.has-arrow(href='#')
+                  | Authentication 
+                  span.label.label-rounded.label-success 6
+                ul.collapse(aria-expanded='false')
+                  li
+                    a(href='page-login.html') Login
+                  li
+                    a(href='page-register.html') Register
+                  li
+                    a(href='page-invoice.html') Invoice
+              li
+                a.has-arrow(href='#') Error Pages
+                ul.collapse(aria-expanded='false')
+                  li
+                    a(href='page-error-400.html') 400
+                  li
+                    a(href='page-error-403.html') 403
+                  li
+                    a(href='page-error-404.html') 404
+                  li
+                    a(href='page-error-500.html') 500
+                  li
+                    a(href='page-error-503.html') 503
+          li
+            a.has-arrow(href='#' aria-expanded='false')
+              i.fa.fa-map-marker
+              span.hide-menu Maps
+            ul.collapse(aria-expanded='false')
+              li
+                a(href='map-google.html') Google Maps
+              li
+                a(href='map-vector.html') Vector Map
+          li
+            a.has-arrow(href='#' aria-expanded='false')
+              i.fa.fa-level-down
+              span.hide-menu Multi level dd
+            ul.collapse(aria-expanded='false')
+              li
+                a(href='#') item 1.1
+              li
+                a(href='#') item 1.2
+              li
+                a.has-arrow(href='#' aria-expanded='false') Menu 1.3
+                ul.collapse(aria-expanded='false')
+                  li
+                    a(href='#') item 1.3.1
+                  li
+                    a(href='#') item 1.3.2
+                  li
+                    a(href='#') item 1.3.3
+                  li
+                    a(href='#') item 1.3.4
+              li
+                a(href='#') item 1.4
+      // End Sidebar navigation
+    // End Sidebar scroll
+  // End Left Sidebar
+  // Page wrapper
+  .page-wrapper
+    // Bread crumb
+    .row.page-titles
+      .col-md-5.align-self-center
+        h3.text-primary Dashboard
+      .col-md-7.align-self-center
+        ol.breadcrumb
+          li.breadcrumb-item
+            a(href='javascript:void(0)') Home
+          li.breadcrumb-item.active Dashboard
+    // End Bread crumb
+    // Container fluid
+    .container-fluid
+      // Start Page Content
+      .row
+        .col-12
+          .card
+            .card-body
+              .card-content
+                // Left sidebar
+                .inbox-leftbar
+                  a.btn.btn-danger.btn-block.waves-effect.waves-light(href='email-inbox.html') Inbox
+                  .mail-list.mt-4
+                    a.list-group-item.border-0.text-danger(href='#')
+                      i.mdi.mdi-inbox.font-18.align-middle.mr-2
+                      b Inbox
+                      span.label.label-danger.float-right.ml-2 8
+                    a.list-group-item.border-0(href='#')
+                      i.mdi.mdi-star.font-18.align-middle.mr-2
+                      | Starred
+                    a.list-group-item.border-0(href='#')
+                      i.mdi.mdi-file-document-box.font-18.align-middle.mr-2
+                      | Draft
+                      span.label.label-info.float-right.ml-2 32
+                    a.list-group-item.border-0(href='#')
+                      i.mdi.mdi-send.font-18.align-middle.mr-2
+                      | Sent Mail
+                    a.list-group-item.border-0(href='#')
+                      i.mdi.mdi-delete.font-18.align-middle.mr-2
+                      | Trash
+                  h6.mt-5.m-b-15 Labels
+                  .list-group.b-0.mail-list
+                    a.list-group-item.border-0(href='#')
+                      span.fa.fa-circle.text-info.mr-2
+                      | Web App
+                    a.list-group-item.border-0(href='#')
+                      span.fa.fa-circle.text-warning.mr-2
+                      | Project 1
+                    a.list-group-item.border-0(href='#')
+                      span.fa.fa-circle.text-purple.mr-2
+                      | Project 2
+                    a.list-group-item.border-0(href='#')
+                      span.fa.fa-circle.text-pink.mr-2
+                      | Friends
+                    a.list-group-item.border-0(href='#')
+                      span.fa.fa-circle.text-success.mr-2
+                      | Family
+                // End Left sidebar
+                .inbox-rightbar
+                  div(role='toolbar')
+                    .btn-group
+                      button.btn.btn-light.waves-effect(type='button')
+                        i.mdi.mdi-archive.font-18.vertical-middle
+                      button.btn.btn-light.waves-effect(type='button')
+                        i.mdi.mdi-alert-octagon.font-18.vertical-middle
+                      button.btn.btn-light.waves-effect(type='button')
+                        i.mdi.mdi-delete-variant.font-18.vertical-middle
+                    .btn-group
+                      button.btn.btn-light.dropdown-toggle.waves-effect(type='button' data-toggle='dropdown' aria-expanded='false')
+                        i.mdi.mdi-folder.font-18.vertical-middle
+                        b.caret.m-l-5
+                      .dropdown-menu
+                        span.dropdown-header Move to
+                        a.dropdown-item(href='javascript: void(0);') Social
+                        a.dropdown-item(href='javascript: void(0);') Promotions
+                        a.dropdown-item(href='javascript: void(0);') Updates
+                        a.dropdown-item(href='javascript: void(0);') Forums
+                    .btn-group
+                      button.btn.btn-light.dropdown-toggle.waves-effect(type='button' data-toggle='dropdown' aria-expanded='false')
+                        i.mdi.mdi-label.font-18.vertical-middle
+                        b.caret.m-l-5
+                      .dropdown-menu
+                        span.dropdown-header Label as:
+                        a.dropdown-item(href='javascript: void(0);') Updates
+                        a.dropdown-item(href='javascript: void(0);') Social
+                        a.dropdown-item(href='javascript: void(0);') Promotions
+                        a.dropdown-item(href='javascript: void(0);') Forums
+                    .btn-group
+                      button.btn.btn-light.dropdown-toggle.waves-effect(type='button' data-toggle='dropdown' aria-expanded='false')
+                        | More
+                        span.caret.m-l-5
+                      .dropdown-menu
+                        span.dropdown-header More Option :
+                        a.dropdown-item(href='javascript: void(0);') Mark as Unread
+                        a.dropdown-item(href='javascript: void(0);') Add to Tasks
+                        a.dropdown-item(href='javascript: void(0);') Add Star
+                        a.dropdown-item(href='javascript: void(0);') Mute
+                  .mt-4
+                    form(role='form')
+                      .form-group
+                        input.form-control(type='email' placeholder='To')
+                      .form-group
+                        input.form-control(type='text' placeholder='Subject')
+                      .form-group
+                        textarea.form-control(name='name' rows='8' cols='80' style='height:300px')
+                      .form-group.m-b-0
+                        .text-right
+                          button.btn.btn-success.waves-effect.waves-light.m-r-5(type='button')
+                            i.fa.fa-floppy-o
+                          button.btn.btn-success.waves-effect.waves-light.m-r-5(type='button')
+                            i.fa.fa-trash-o
+                          button.btn.btn-purple.waves-effect.waves-light
+                            span Send
+                            i.fa.fa-send.m-l-10
+                  // end card
+      // End PAge Content
+    // End Container fluid
+    // footer
+    footer.footer
+      | &copy; 2018 All rights reserved. 
+    
+    // End footer
+  // End Page wrapper
+// End Wrapper
+// All Jquery
+script(src='assets/js/lib/jquery/jquery.min.js')
+// Bootstrap tether Core JavaScript
+script(src='assets/js/lib/bootstrap/js/popper.min.js')
+script(src='assets/js/lib/bootstrap/js/bootstrap.min.js')
+// slimscrollbar scrollbar JavaScript
+script(src='assets/js/jquery.slimscroll.js')
+// Menu sidebar
+script(src='assets/js/sidebarmenu.js')
+// stickey kit
+script(src='assets/js/lib/sticky-kit-master/dist/sticky-kit.min.js')
+// Custom JavaScript
+script(src='assets/js/custom.min.js')

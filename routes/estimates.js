@@ -1,63 +1,60 @@
-"use strict";
-
 var express = require('express');
 var router = express.Router();
 let mongoose = require('mongoose');
-let Estiamte = require('../models/estimate');
-let Invoice = require('../models/invoice');
+let Estimate = require('../models/estimate');
 
-/* GET invoices/estimates listing. */
+/* GET estimates/estimates listing. */
 
 router.post('/', function(req, res, next) {
-  let invoiceToSave = req.body;
+  let estimateToSave = req.body;
   if (req.body.userId == (null || undefined)){
     return console.error("userId missing.");
   }
   
-  invoiceToSave = new Invoice(invoiceToSave);
-  invoiceToSave.save(function(err, invoice){
-    res.send(invoice);
+  estimateToSave = new Estimate(estimateToSave);
+  estimateToSave.save(function(err, estimate){
+    res.send(estimate);
   });
 });
 
 router.get('/', function(req, res, next) {
-  Invoice.find(function (err, invoices){
+  Estimate.find(function (err, estimates){
     if (err) return console.error(err);
-    res.json(invoices);    
+    res.json(estimates);    
   });
 });
 
 
 router.get('/:id', function(req, res, next) {
-  Invoice.findOne({_id: req.params["id"]}, function (err, invoice){
+  Estimate.findOne({_id: req.params["id"]}, function (err, estimate){
     if (err) return console.error(err);
-    res.send(invoice);
+    res.send(estimate);
   });
 });
 
 router.get('/user/:userId', function(req, res, next) {
-  Invoice.find({userId: req.params["userId"]}, function (err, invoice){
+  Estimate.find({userId: req.params["userId"]}, function (err, estimate){
     if (err) return console.error(err);
-    res.send(invoice);
+    res.send(estimate);
   });
 });
 
 router.get('/email/:email', function(req, res, next) {
-  Invoice.find({email: req.params["email"]}, function (err, invoices){
+  Estimate.find({email: req.params["email"]}, function (err, estimates){
     if (err) return console.error(err);
-    res.send(invoices);
+    res.send(estimates);
   });
 });
 
 router.put('/:id', function(req, res, next) {
-  Invoice.findByIdAndUpdate({_id: req.params["id"]}, req.body, function(err, invoice) {
+  Estimate.findByIdAndUpdate({_id: req.params["id"]}, req.body, function(err, estimate) {
     if (err) return next(err);
     res.status(204).send();
   });
 }); 
 
 router.delete('/:id', function(req, res, next) {
-  Invoice.deleteOne({_id: req.params["id"]}, function(err, invoice) {
+  Estimate.deleteOne({_id: req.params["id"]}, function(err, estimate) {
     if (err) return next(err);
     res.status(204).send();
   });
