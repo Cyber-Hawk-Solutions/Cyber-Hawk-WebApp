@@ -37,17 +37,22 @@ $(document).ready(function(){
     sendEstimate();
   });
 
-  function toggleItemSelection(item){
-    $(item).toggleClass("selected-success rounded");
-
-    let serviceTitle = ($(item)[0].children[1].innerText).toLowerCase();
-    if (selectedServices[serviceTitle]== (null || undefined)){
-      addServiceToEstimate(getServiceItem(serviceTitle));
+  $("#save-estimate").click(function (e){
+    let userId = $(this).attr("userid");
+    if (userId != ( "" && null && undefined)){
+      saveEstimate(userId);
     }
-    else {
-      removeServiceFromEstimate(getServiceItem(serviceTitle));
-    }
+  });
 
+  function saveEstimate(userId){
+    let estimate = getFullEstimate();
+    estimate.userId = userId;
+
+    if (estimate.services.length > 0){
+      $.post("api/invoice/", estimate, function(res){
+          showInvoiceSentMessage();
+      });
+    }
   }
 
   function sendEstimate(){
@@ -64,6 +69,19 @@ $(document).ready(function(){
         }
       });
     }
+  }
+
+  function toggleItemSelection(item){
+    $(item).toggleClass("selected-success rounded");
+
+    let serviceTitle = ($(item)[0].children[1].innerText).toLowerCase();
+    if (selectedServices[serviceTitle]== (null || undefined)){
+      addServiceToEstimate(getServiceItem(serviceTitle));
+    }
+    else {
+      removeServiceFromEstimate(getServiceItem(serviceTitle));
+    }
+
   }
 
   function getFullEstimate(){
@@ -141,6 +159,12 @@ $(document).ready(function(){
     $("#email-sent-message.text-danger").removeClass("hidden");
     $("#email-sent-message.text-success").addClass("hidden");
 
+  }
+
+  function showInvoiceSentMessage(){
+    $("#save-estimate").text("Estimate saved");
+    $("#save-estimate").attr("userId", "")
+    $("#save-estimate").attr("disabled", "")
   }
 
 })();
