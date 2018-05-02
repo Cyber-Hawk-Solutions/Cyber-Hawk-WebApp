@@ -1,0 +1,182 @@
+extends single-page-header.pug
+
+block append styles
+  link(rel='stylesheet' href='assets/css/Services.css')
+block append scripts
+    script(src='/assets/js/cost-estimator.js')
+block page-title
+  .text-center.row
+  h1.text-light.align-self-center  Cost Estimator
+  .card.header-card.align-self-center
+    .card-body
+      .row.text-center
+        .col.rounded.selected-light
+          span.fa-stack.fa-4x(style='font-size:40px;')
+            i.fa.fa-circle.fa-stack-2x.text-primary
+            i.fa.fa-laptop.fa-stack-1x.fa-inverse
+          h4.service-heading(style='color:#333333;') Website
+        .col.rounded
+          span.fa-stack.fa-4x(style='font-size:40px;')
+            i.fa.fa-circle.fa-stack-2x.text-secondary
+            i.fa.fa-mobile-phone.fa-stack-1x.fa-inverse
+          h4.service-heading(style='color:#333333;') App
+
+block content
+  section
+    h2 How big is your website?
+    section.service-row(style='padding-top:21px;padding-bottom:20px;')
+      .container
+        .row.text-center
+          .col-md-4.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-mobile-phone.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Small
+            p.text-muted 4-5 Key Feature Pages.
+          .col-md-4.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-desktop.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Medium
+            p.text-muted 6-9 Key Feature Pages.
+          .col-md-4.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-server.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Large
+            p.text-muted 10-15 key Feature Pages.
+  section
+    h2 Users and Accounts
+    section.service-row(style='padding-top:21px;padding-bottom:20px;')
+      .container
+        .row.text-center
+          .col-md-3.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-mobile-phone.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Email/Password Sign Up
+            p.text-muted User sign up and login with email and password.
+          .col-md-3.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-laptop.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Third Party Login
+            p.text-muted Sign up/login with facebook, google, etc. accounts.
+          .col-md-3.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-desktop.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') User Invitation Emails
+            p.text-muted New users can be invited via emails.
+          .col-md-3.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-desktop.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Multi-tenant Accounts
+            p.text-muted Account based signups, each with their own administrators and users
+  section
+    h2 User Generated Content
+    section.service-row(style='padding-top:21px;padding-bottom:20px;')
+      .container
+        .row.text-center
+          .col-md-3.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-mobile-phone.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Dashboard
+            p.text-muted Usually the first thing a logged in user sees. May summarize data and perharps show graphs and notices.
+          .col-md-.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-desktop.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Activity Feed
+            p.text-muted Shows what the user has been up to recently.
+          .col-md-3.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-server.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') File Uploading
+            p.text-muted Users can upload files (images, pdfs, etc.).
+          .col-md-3.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-server.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') User Profiles
+            p.text-muted Users can have their own page with a customizable profile.
+          .col-md-3.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-server.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') File Uploading
+            p.text-muted Users can upload files (images, pdfs, etc.).
+          .col-md-3.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-server.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Tags
+            p.text-muted Categorize information to find them easier.
+          .col-md-3.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-server.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Free Text searching
+            p.text-muted Giving users the ability to do generic site searches.
+          .col-md-3.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-server.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Ratings/Reviews
+            p.text-muted Allows for restaurant/product and customer satisfaction reviews.
+    section
+      h2 Dates/ Locations
+      section.service-row(style='padding-top:21px;padding-bottom:20px;')
+        .container
+          .row.text-center
+            .col-md-4.service-item
+              span.fa-stack.fa-4x(style='font-size:50px;')
+                i.fa.fa-circle.fa-stack-2x.text-primary-dark
+                i.fa.fa-user.fa-stack-1x.fa-inverse
+              h4.service-heading(style='color:#333333;') Calendering
+              p.text-muted Display and capture of data in calender format.
+            .col-md-4.service-item
+              span.fa-stack.fa-4x(style='font-size:50px;')
+                i.fa.fa-circle.fa-stack-2x.text-primary-dark
+                i.fa.fa-user.fa-stack-1x.fa-inverse
+              h4.service-heading(style='color:#333333;') Display of map data/Geolocation
+              p.text-muted Display a map with data points.
+    //- section
+    //-   h2 Network Setup/ Maintenance 
+    //-   section.service-row(style='padding-top:21px;padding-bottom:20px;')
+    //-     .container
+    //-       .row.text-center
+    //-         .col-md-4
+    //-           span.fa-stack.fa-4x(style='font-size:50px;')
+    //-             i.fa.fa-circle.fa-stack-2x.text-primary-dark
+    //-             i.fa.fa-user.fa-stack-1x.fa-inverse
+    //-           h4.service-heading(style='color:#333333;')
+    //-           p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+block post-content
+  section#estimate-result
+      .container
+        .row
+          .col.col-md-6
+            .row
+              h2
+                | Total Cost: 
+                span#total-cost 0
+            .row
+              h3
+                | Developer Days:
+                span#developer-days 0
+          .col.col-md-6.col-sm-12 
+            .row
+              if user
+                button#save-estimate.btn.btn-outline-primary.btn-block(type='button', userId=user.id) Save to Account
+            .row
+              .input-group.mb-3
+                input#estimate-email.form-control(type='text' placeholder='Email Address' aria-label='Email Address' aria-describedby='basic-addon2')
+                .input-group-append
+                  button#send-estimate.btn.btn-primary(type='button') Send Me The Estimate
+            .row
+              p#email-sent-message.text-success.hidden Estimate sent.
+              p#email-sent-message.text-danger.hidden Estimate failed to send - is the email valid?

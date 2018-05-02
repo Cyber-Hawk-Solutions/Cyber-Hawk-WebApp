@@ -1,0 +1,182 @@
+doctype html
+head
+  meta(name='viewport' content='width=device-width')
+  meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
+  title Thank you for your order!
+  style(media='all' type='text/css').
+    @media all {
+    h3 {
+      color: black !important;
+    }
+    .service {
+      text-transform: capitalize !important;
+      color: black !important;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .btn-primary table td:hover {
+    background-color: #34495e !important;
+    }
+    .btn-primary a:hover {
+    background-color: #34495e !important;
+    border-color: #34495e !important;
+    }
+    }
+    @media all {
+    .btn-secondary a:hover {
+      border-color: #34495e !important;
+      color: #34495e !important;
+    }
+    .main-button {
+      background-image: linear-gradient(#018ca7, #018ca7 50%, #018ca7) !important;
+    }
+    .main-button:hover {
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#018ca7), color-stop(50%, #037e96), to(#025f71)) !important;
+      background-image: linear-gradient(#018ca7, #037e96 50%, #025f71 ) !important;
+    }
+    .main-button::active {
+      color: #fff;
+      background-color: #046072 !important;
+      border-color: #055a6b !important;
+    }
+    }
+    @media only screen and (max-width: 620px) {
+    table[class=body] h1 {
+    font-size: 28px !important;
+    margin-bottom: 10px !important;
+    }
+    table[class=body] h2 {
+    font-size: 22px !important;
+    margin-bottom: 10px !important;
+    }
+    table[class=body] h3 {
+    font-size: 16px !important;
+    margin-bottom: 10px !important;
+    }
+    table[class=body] p,
+    table[class=body] ul,
+    table[class=body] ol,
+    table[class=body] td,
+    table[class=body] span,
+    table[class=body] a {
+    font-size: 16px !important;
+    }
+    table[class=body] .wrapper,
+    table[class=body] .article {
+    padding: 10px !important;
+    }
+    table[class=body] .content {
+    padding: 0 !important;
+    }
+    table[class=body] .container {
+    padding: 0 !important;
+    width: 100% !important;
+    }
+    table[class=body] .header {
+    margin-bottom: 10px !important;
+    }
+    table[class=body] .main {
+    border-left-width: 0 !important;
+    border-radius: 0 !important;
+    border-right-width: 0 !important;
+    }
+    table[class=body] .btn table {
+    width: 100% !important;
+    }
+    table[class=body] .btn a {
+    width: 100% !important;
+    }
+    table[class=body] .img-responsive {
+    height: auto !important;
+    max-width: 100% !important;
+    width: auto !important;
+    }
+    table[class=body] .alert td {
+    border-radius: 0 !important;
+    padding: 10px !important;
+    }
+    table[class=body] .span-2,
+    table[class=body] .span-3 {
+    max-width: none !important;
+    width: 100% !important;
+    }
+    table[class=body] .receipt {
+    width: 100% !important;
+    }
+    }
+    @media all {
+    .ExternalClass {
+    width: 100%;
+    }
+    .ExternalClass,
+    .ExternalClass p,
+    .ExternalClass span,
+    .ExternalClass font,
+    .ExternalClass td,
+    .ExternalClass div {
+    line-height: 100%;
+    }
+    .apple-link a {
+    color: inherit !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+    text-decoration: none !important;
+    }
+    }
+table.body(border='0' cellpadding='0' cellspacing='0' style='border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #f6f6f6;' width='100%' bgcolor='#f6f6f6')
+  tr
+    td(style='font-family: sans-serif; font-size: 14px; vertical-align: top;' valign='top') &nbsp;
+    td.container(style='font-family: sans-serif; font-size: 14px; vertical-align: top; display: block; Margin: 0 auto !important; max-width: 580px; padding: 10px; width: 580px;' width='580' valign='top')
+      .content(style='box-sizing: border-box; display: block; Margin: 0 auto; max-width: 580px; padding: 10px;')
+        // START CENTERED WHITE CONTAINER
+        span.preheader(style='color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;')
+          title Project Estimate
+        table.main(style='color:#1f6e84; border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background: #fff; border-radius: 3px;' width='100%')
+          // START MAIN CONTENT AREA
+          tr
+            td.wrapper(style='font-family: sans-serif; font-size: 14px; vertical-align: top; box-sizing: border-box; padding: 20px;' valign='top')
+              table(border='0' cellpadding='0' cellspacing='0' style='border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;' width='100%')
+                tr
+                  td(style='font-family: sans-serif; font-size: 14px; vertical-align: top;' valign='top')
+                    h1(style='font-family: sans-serif; font-size: 24px; font-weight: bold; margin: 0; Margin-bottom: 15px;')
+                      | Project Estimate
+                    table
+                      thead
+                        tr
+                          th(scope='col') Task
+                          th(scope='col') Period (Days)
+                      tbody
+                        each service in estimate.services
+                          tr
+                            td.service= service.title
+                            td.service.text-center= service.period
+                    h3(style="color: black !important;")
+                      | Total Cost: $#{estimate.cost} XCD
+                    h3(style="color: black !important;")
+                      | Project Period: #{estimate.period} days
+                    p(style='font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;')
+                    table.btn.btn-primary(border='0' cellpadding='0' cellspacing='0' style='border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; box-sizing: border-box;' width='100%')
+                      tbody
+                        tr
+                          td(align='left' style='font-family: sans-serif; font-size: 14px; vertical-align: top; padding-bottom: 15px;' valign='top')
+                            table(border='0' cellpadding='0' cellspacing='0' style='border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;')
+                              tbody
+                                tr
+                                  td(style='font-family: sans-serif; font-size: 14px; vertical-align: top; background-color: #3498db; border-radius: 5px; text-align: center;' valign='top' bgcolor='#3498db' align='center')
+                                    a.main-btn(href='https://cyberhawk.herokuapp.com' target='_blank' style='display: inline-block; color: #ffffff; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize;') Visit our website
+                    p(style='color: #1f6e84; font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;') We're happy to serve you!
+          // END MAIN CONTENT AREA
+        // START FOOTER
+        .footer(style='clear: both; padding-top: 10px; text-align: center; width: 100%;')
+          table(border='0' cellpadding='0' cellspacing='0' style='border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;' width='100%')
+            tr
+              td.content-block.powered-by(style='font-family: sans-serif; vertical-align: top; padding-top: 10px; padding-bottom: 10px; font-size: 12px; color: #999999; text-align: center;' valign='top' align='center')
+                | Powered by 
+                a(href='' style='color: #999999; font-size: 12px; text-align: center; text-decoration: none;') Cyber Hawk Inc
+                | .
+        // END FOOTER
+        // END CENTERED WHITE CONTAINER
+    td(style='font-family: sans-serif; font-size: 14px; vertical-align: top;' valign='top') &nbsp;

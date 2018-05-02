@@ -1,0 +1,427 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  // Tell the browser to be responsive to screen width
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  meta(name='description' content='')
+  meta(name='author' content='')
+  // Favicon icon
+  link(rel='icon' type='assets/img/Cyber Hawk Logo.png' sizes='16x16' href='assets/images/favicon.png')
+  title Cyber Hawk | Dashboard
+  // Bootstrap Core CSS
+  link(href='assets/css/lib/bootstrap/bootstrap.min.css' rel='stylesheet')
+  // Custom CSS
+  link(href='/assets/css/lib/calendar2/semantic.ui.min.css' rel='stylesheet' type="text/css")
+  link(href='/assets/css/lib/calendar2/pignose.calendar.min.css' rel='stylesheet' type="text/css")
+  link(href='/assets/css/lib/owl.carousel.min.css' rel='stylesheet' type="text/css")
+  link(href='/assets/css/lib/owl.theme.default.min.css' rel='stylesheet' type="text/css")
+  link(href='/assets/css/helper.css' rel='stylesheet' type="text/css")
+  link(href='/assets/css/dashboard-style.css' rel='stylesheet' type="text/css")
+  // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+  // WARNING: Respond.js doesn't work if you view the page via file:**
+  //if lt IE 9
+    script(src='assets/https:**oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+    script(src='assets/https:**oss.maxcdn.com/libs/respond.assets/js/1.4.2/respond.min.js')
+// Preloader - style you can find in spinners.css
+.preloader
+  svg.circular(viewbox='25 25 50 50')
+    circle.path(cx='50' cy='50' r='20' fill='none' stroke-width='2' stroke-miterlimit='10')
+// Main wrapper
+#main-wrapper
+  // header header
+  .header
+    nav.navbar.top-navbar.navbar-expand-md.navbar-light
+      // Logo
+      .navbar-header
+      a.navbar-brand(href='index.pug')
+        // Logo icon
+        b
+        span
+         h5.m-b-20 CYBER HAWK INC.
+          img.dark-logo(src='assets/img/Cyber Hawk Logo.png' alt='Cyber Hawk Logo' width='50' height='50')
+        // End Logo icon
+      .navbar-collapse
+        // toggle and nav items
+        ul.navbar-nav.mr-auto.mt-md-0
+          // Sidebar toggler
+          li.nav-item.m-l-10
+            a.nav-link.sidebartoggler.hidden-sm-down.text-muted(href='javascript:void(0)')
+              i.ti-menu
+          li.nav-item.m-l-10
+            a.nav-link.hidden-sm-down.text-muted(href='/app-estimate') App Estimater
+          // Messages
+          li.dropdown-menu.animated.zoomIn
+              ul.mega-dropdown-menu.row
+                li.col-lg-3.m-b-30
+                  h4.m-b-20 CONTACT US
+                  // Contact
+                  form
+                    .form-group
+                      input#exampleInputname1.form-control(type='text' placeholder='Enter Name')
+                    .form-group
+                      input.form-control(type='email' placeholder='Enter email')
+                    .form-group
+                      textarea#exampleTextarea.form-control(rows='3' placeholder='Message')
+                    button.btn.btn-info(type='submit') Submit
+                li.col-lg-3.col-xlg-3.m-b-30
+                  h4.m-b-20 List style
+                  // List style
+                  ul.list-style-none
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                li.col-lg-3.col-xlg-3.m-b-30
+                  h4.m-b-20 List style
+                  // List style
+                  ul.list-style-none
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                li.col-lg-3.col-xlg-3.m-b-30
+                  h4.m-b-20 List style
+                  // List style
+                  ul.list-style-none
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+                    li
+                      a(href='javascript:void(0)')
+                        i.fa.fa-check.text-success
+                        |  This Is Another Link
+          // End Messages
+        // User profile and search
+        ul.navbar-nav.my-lg-0
+          // Profile
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle.text-muted(href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+              span.username #{user.username}
+              img.profile-pic(src='assets/images/users/5.jpg' alt='user')
+            .dropdown-menu.dropdown-menu-right.animated.zoomIn
+              ul.dropdown-user
+                li
+                  a(href='#')
+                    i.ti-user
+                    |  Profile
+                li
+                  a(href='#')
+                    i.ti-wallet
+                    |  Balance
+                li
+                  a(href='#')
+                    i.ti-email
+                    |  Inbox
+                li
+                  a(href='#')
+                    i.ti-settings
+                    |  Setting
+                li
+                  a(href='#')
+                    i.fa.fa-power-off
+                    |  Logout
+  // End header header
+  // Left Sidebar
+  .left-sidebar
+    // Sidebar scroll
+    .scroll-sidebar
+      // Sidebar navigation
+      nav.sidebar-nav
+        ul#sidebarnav
+          li.nav-devider
+          li.nav-label Home
+          li
+            a.has-arrow(href='#' aria-expanded='false')
+              i.fa.fa-tachometer
+              span.hide-menu
+                | Dashboard 
+                span.label.label-rouded.label-primary.pull-right 2
+            ul.collapse(aria-expanded='false')
+              li
+                a(href='index.html') Ecommerce 
+              li
+                a(href='index1.html') Analytics 
+          li.nav-label Apps
+          li
+            a.has-arrow(href='#' aria-expanded='false')
+              i.fa.fa-envelope
+              span.hide-menu Email
+            ul.collapse(aria-expanded='false')
+              li
+                a(href='email-compose.html') Compose
+              li
+                a(href='email-read.html') Read
+              li
+                a(href='email-inbox.html') Inbox
+          li.nav-label Features
+          li
+            a.has-arrow(href='#' aria-expanded='false')
+              i.fa.fa-suitcase
+              span.hide-menu
+                | Bootstrap UI 
+                span.label.label-rouded.label-warning.pull-right 6
+            ul.collapse(aria-expanded='false')
+              li
+                a(href='ui-alert.html') Alert
+              li
+                a(href='ui-button.html') Button
+              li
+                a(href='ui-dropdown.html') Dropdown
+              li
+                a(href='ui-progressbar.html') Progressbar
+              li
+                a(href='ui-tab.html') Tab
+              li
+                a(href='ui-typography.html') Typography
+          li
+            a.has-arrow(href='#' aria-expanded='false')
+              i.fa.fa-suitcase
+              span.hide-menu
+                | Components 
+                span.label.label-rouded.label-danger.pull-right 6
+            ul.collapse(aria-expanded='false')
+              li
+                a(href='uc-calender.html') Calender
+              li
+                a(href='uc-datamap.html') Datamap
+              li
+                a(href='uc-nestedable.html') Nestedable
+              li
+                a(href='uc-sweetalert.html') Sweetalert
+              li
+                a(href='uc-toastr.html') Toastr
+              li
+                a(href='uc-weather.html') Weather
+          li
+            a.has-arrow(href='#' aria-expanded='false')
+              i.fa.fa-wpforms
+              span.hide-menu Forms
+            ul.collapse(aria-expanded='false')
+              li
+                a(href='form-basic.html') Basic Forms
+              li
+                a(href='form-layout.html') Form Layout
+              li
+                a(href='form-validation.html') Form Validation
+              li
+                a(href='form-editor.html') Editor
+              li
+                a(href='form-dropzone.html') Dropzone
+          li
+            a.has-arrow(href='#' aria-expanded='false')
+              i.fa.fa-table
+              span.hide-menu Tables
+            ul.collapse(aria-expanded='false')
+              li
+                a(href='table-bootstrap.html') Basic Tables
+              li
+                a(href='table-datatable.html') Data Tables
+          li.nav-label Layout
+          li
+            a.has-arrow(href='#' aria-expanded='false')
+              i.fa.fa-columns
+              span.hide-menu Layout
+            ul.collapse(aria-expanded='false')
+              li
+                a(href='layout-blank.html') Blank
+              li
+                a(href='layout-boxed.html') Boxed
+              li
+                a(href='layout-fix-header.html') Fix Header
+              li
+                a(href='layout-fix-sidebar.html') Fix Sidebar
+          li.nav-label EXTRA
+          li
+            a.has-arrow(href='#' aria-expanded='false')
+              i.fa.fa-book
+              span.hide-menu
+                | Pages 
+                span.label.label-rouded.label-success.pull-right 8
+            ul.collapse(aria-expanded='false')
+              li
+                a.has-arrow(href='#')
+                  | Authentication 
+                  span.label.label-rounded.label-success 6
+                ul.collapse(aria-expanded='false')
+                  li
+                    a(href='page-login.html') Login
+                  li
+                    a(href='page-register.html') Register
+                  li
+                    a(href='page-invoice.html') Invoice
+              li
+                a.has-arrow(href='#') Error Pages
+                ul.collapse(aria-expanded='false')
+                  li
+                    a(href='page-error-400.html') 400
+                  li
+                    a(href='page-error-403.html') 403
+                  li
+                    a(href='page-error-404.html') 404
+                  li
+                    a(href='page-error-500.html') 500
+                  li
+                    a(href='page-error-503.html') 503
+          li
+            a.has-arrow(href='#' aria-expanded='false')
+              i.fa.fa-map-marker
+              span.hide-menu Maps
+            ul.collapse(aria-expanded='false')
+              li
+                a(href='map-google.html') Google
+              li
+                a(href='map-vector.html') Vector
+          li
+            a.has-arrow(href='#' aria-expanded='false')
+              i.fa.fa-level-down
+              span.hide-menu Multi level dd
+            ul.collapse(aria-expanded='false')
+              li
+                a(href='#') item 1.1
+              li
+                a(href='#') item 1.2
+              li
+                a.has-arrow(href='#' aria-expanded='false') Menu 1.3
+                ul.collapse(aria-expanded='false')
+                  li
+                    a(href='#') item 1.3.1
+                  li
+                    a(href='#') item 1.3.2
+                  li
+                    a(href='#') item 1.3.3
+                  li
+                    a(href='#') item 1.3.4
+              li
+                a(href='#') item 1.4
+      // End Sidebar navigation
+    // End Sidebar scroll
+  // End Left Sidebar
+  // Page wrapper
+  .page-wrapper
+    // Bread crumb
+    .row.page-titles
+      .col-md-5.align-self-center
+        h3.text-primary Dashboard
+      .col-md-7.align-self-center
+        ol.breadcrumb
+          li.breadcrumb-item
+            a(href='javascript:void(0)') Home
+          li.breadcrumb-item.active Dashboard
+    // End Bread crumb
+    // Container fluid
+    .container-fluid
+      // Start Page Content
+      // column
+      .row
+        each invoice in invoices
+          .col-lg-9
+            .card
+              .card-title
+                .row 
+                  .col-md-8
+                    h4 Invoice - #{invoice.id}
+                  .col-md-4.text-right
+                    h4.text-muted Cost: #{invoice.cost} | Period: #{invoice.period} days
+              .card-body
+                .table-responsive
+                  table.table
+                    thead
+                      tr
+                        th #
+                        th Service
+                        th Period (Days)
+                        th Status
+                    tbody
+                      each service in invoice.services
+                        tr
+                          td
+                            .round-img
+                              a(href='')
+                                img(src='assets/images/avatar/4.jpg' alt='')
+                          td #{service.title}
+                          td
+                            span #{service.period}
+                          td
+                            span.badge.badge-warning Pending
+      // End PAge Content
+    // End Container fluid
+    footer.footer
+      | 
+  // End Page wrapper
+// End Wrapper
+// All Jquery
+script(src='assets/js/lib/jquery/jquery.min.js')
+// Bootstrap tether Core JavaScript
+script(src='assets/js/lib/bootstrap/assets/js/popper.min.js')
+script(src='assets/js/lib/bootstrap/assets/js/bootstrap.min.js')
+// slimscrollbar scrollbar JavaScript
+script(src='assets/js/jquery.slimscroll.js')
+// Menu sidebar
+script(src='assets/js/sidebarmenu.js')
+// stickey kit
+script(src='assets/js/lib/sticky-kit-master/dist/sticky-kit.min.js')
+// Custom JavaScript
+// Amchart
+script(src='assets/js/lib/morris-chart/raphael-min.js')
+script(src='assets/js/lib/morris-chart/morris.js')
+script(src='assets/js/lib/morris-chart/dashboard1-init.js')
+script(src='assets/js/lib/calendar-2/moment.latest.min.js')
+// scripit init
+script(src='assets/js/lib/calendar-2/semantic.ui.min.js')
+// scripit init
+script(src='assets/js/lib/calendar-2/prism.min.js')
+// scripit init
+script(src='assets/js/lib/calendar-2/pignose.calendar.min.js')
+// scripit init
+script(src='assets/js/lib/calendar-2/pignose.init.js')
+script(src='assets/js/lib/owl-carousel/owl.carousel.min.js')
+script(src='assets/js/lib/owl-carousel/owl.carousel-init.js')
+script(src='assets/js/scripts.js')
+// scripit init
+script(src='assets/js/custom.min.js')

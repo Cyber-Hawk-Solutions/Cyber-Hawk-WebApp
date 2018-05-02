@@ -1,0 +1,75 @@
+extends layout.pug
+
+block append styles
+  link(rel='stylesheet' href='assets/css/Navigation-with-Button.css')
+  link(rel='stylesheet' href='assets/css/Footer-Dark.css')
+  link(rel='stylesheet' href='assets/css/Services.css')
+block body
+  div
+    nav.navbar.navbar-light.navbar-expand-md.navigation-clean-button(style='background-color:#013644;')
+      .container
+        img(src='assets/img/Cyber Hawk Logo.png' alt='Cyber Hawk Logo' width='75' height='75' href='/index')
+        a.navbar-brand(href='/' style='color:#ffffff;') Cyber Hawk
+        button.navbar-toggler(data-toggle='collapse' data-target='#navcol-1')
+          span.sr-only Toggle navigation
+          span.navbar-toggler-icon
+        #navcol-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.mr-auto
+              li.nav-item(role='presentation')
+                a.nav-link(href='/app-estimate' style='color:#dddddd;') Pricing
+          if !user
+            span.navbar-text.actions
+              a.login(href='login' style='color:#dddddd;') Log In
+              a.btn.btn-light.action-button(role='button' href='signup' style='background-color:#018ca7;') Sign Up
+          else
+            a.dashboard-link.btn.btn-outline-light(href='dashboard' style='color:#dddddd;') Dashboard
+  div.parallax-header
+    div.d-flex.justify-content-center(data-bs-parallax-bg='true' style='height:165px;background-image:url(https://unsplash.it/1800/900?image=1051);background-position:center;background-size:cover;')
+      h1.align-self-center.text-center.text-light 
+        block page-title
+          | Page Title 
+  div
+    .container
+      .row
+        .col-md-12(style='margin:0px;margin-top:33px;')
+          .card
+            .card-body
+              block content
+      .row
+        .col-md-12(style='margin:0px;margin-top:33px;')
+          block post-content
+  block footer
+    .footer-dark
+      footer
+        .container
+          .row
+            .col-sm-6.col-md-3.item
+              h3 Services
+              ul
+                li
+                  a(href='#') Web design
+                li
+                  a(href='#') Development
+                li
+                  a(href='#') Hosting
+            .col-sm-6.col-md-3.item
+              h3 About
+              ul
+                li
+                  a(href='/about') Company
+                li
+                  a(href='#') Team
+            .col-md-6.item.text
+              h3 Contact Us
+              p
+                | 1(268)480-2420
+            .col.item.social
+              a(href='#')
+                i.icon.ion-social-facebook
+              a(href='#')
+                i.icon.ion-social-twitter
+              a(href='#')
+                i.icon.ion-social-snapchat
+              a(href='#')
+                i.icon.ion-social-instagram
+          p.copyright Cyber Hawk Inc. &copy; 2018

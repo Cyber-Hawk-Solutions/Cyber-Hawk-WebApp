@@ -1,0 +1,92 @@
+html, body {
+  height: 100%;
+}
+
+.text-primary {
+  color: #018ca7 !important;
+}
+
+.text-primary-dark {
+  color: #1f6e84 !important;
+}
+.text-secondary {
+  color: #003847 !important;
+}
+
+h3 {
+  color: #495057 !important;
+  font-size: 1.70rem;
+}
+
+.btn-primary {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#018ca7), color-stop(50%, #018ca7), to(#018ca7));
+  background-image: linear-gradient(#018ca7, #018ca7 50%, #018ca7);
+}
+
+.btn-primary:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#018ca7), color-stop(50%, #037e96), to(#025f71));
+  background-image: linear-gradient(#018ca7, #037e96 50%, #025f71 );
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show>.btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #046072;
+  border-color: #055a6b;
+}
+
+.btn-outline-light:hover {
+  color: #2d2d2d;
+  background-color: #f8f9fa54;
+  border-color: #f8f9fa;
+}
+
+.card {
+  background-color: rgba(248,249,250,0.5);
+}
+
+.main .card .card-body {
+  padding: 3.25rem !important;
+} 
+
+.parallax-header {
+  background: #01364461!important;
+}
+
+.parallax-header .header-card {
+  height: 80%;
+  margin-left: 30px;
+}
+
+.header-card .card-body {
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+}
+
+.card .selected-light {
+  background: #ffffff8f;
+}
+
+.card .selected-success {
+  background: #21a9af63;
+}
+
+.card .selected-success .service-heading {
+  color: #003847 !important;
+}
+
+.card .selected-success p {
+  color: #018ca7 !important;
+}
+
+#estimate-result {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#save-estimate {
+  margin-bottom: 15px;
+}
