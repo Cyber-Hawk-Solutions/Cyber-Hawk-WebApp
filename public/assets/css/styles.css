@@ -1,3 +1,7 @@
+html, body {
+  height: 100%;
+}
+
 .text-primary {
   color: #018ca7 !important;
 }
@@ -28,6 +32,12 @@ h3 {
   color: #fff;
   background-color: #046072;
   border-color: #055a6b;
+}
+
+.btn-outline-light:hover {
+  color: #2d2d2d;
+  background-color: #f8f9fa54;
+  border-color: #f8f9fa;
 }
 
 .card {
@@ -77,3 +87,6 @@ h3 {
   display: none !important;
 }
 
+#save-estimate {
+  margin-bottom: 15px;
+}

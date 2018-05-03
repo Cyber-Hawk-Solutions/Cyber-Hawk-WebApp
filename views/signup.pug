@@ -1,10 +1,10 @@
-extends single-page-header.pug
+extends layout.pug
 
 block body
   <div class="signup__container">
     <div class="container__child signup__thumbnail">
       <div class="thumbnail__logo">
-        <img src='assets/img/Cyber Hawk Logo.png' alt='Cyber Hawk Logo' width='170' height='170'></img>
+        <img src='assets/img/Cyber Hawk Logo.png' alt='Cyber Hawk Logo' width='200' height='200'></img>
         </div>
       <div class="thumbnail__content text-center">
         <h2 class="heading--primary">Welcome to Cyber Hawk Inc.</h2>
@@ -16,11 +16,11 @@ block body
         <div class="form-group">
         <div class="form-group">
           <label for="email">Email</label>
-          <input class="form-control" type="text" name="username" id="email" placeholder="james" required />
+          <input class="form-control" type="text" name="username" id="email" placeholder="username.." required />
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input class="form-control" type="password" name="password" id="password" placeholder="********" required />
+          <input class="form-control" type="password" name="password" id="password" placeholder="password.." required />
         </div>
          
       </form>
@@ -34,40 +34,3 @@ block styles
   link(rel='stylesheet' href='/assets/css/signup.css' type="text/css")
 
 block scripts
-  block footer
-    .footer-dark
-      footer
-        .container
-          .row
-            .col-sm-6.col-md-3.item
-              h3 Services
-              ul
-                li
-                  a(href='#') Web design
-                li
-                  a(href='#') Development
-                li
-                  a(href='#') Hosting
-            .col-sm-6.col-md-3.item
-              h3 About
-              ul
-                li
-                  a(href='#') Company
-                li
-                  a(href='#') Team
-                li
-                  a(href='#') Careers
-            .col-md-6.item.text
-              h3 Contact Us
-              p
-                | 1(268)480-2420
-            .col.item.social
-              a(href='#')
-                i.icon.ion-social-facebook
-              a(href='#')
-                i.icon.ion-social-twitter
-              a(href='#')
-                i.icon.ion-social-snapchat
-              a(href='#')
-                i.icon.ion-social-instagram
-          p.copyright Cyber Hawk Inc. &copy; 2018

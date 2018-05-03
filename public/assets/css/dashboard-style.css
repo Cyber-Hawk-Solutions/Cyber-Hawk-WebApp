@@ -6922,6 +6922,13 @@ tbody tr td:last-child {
   }
 }
 
+.left-sidebar {
+  display: none!important;
+}
+
+.page-wrapper {
+  margin-left: 0px !important;
+}
 
 span.username {
   padding-right: 15px;

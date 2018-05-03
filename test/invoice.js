@@ -161,7 +161,6 @@ describe('Invoices', () => {
 
       existingInvoice.save(function (err, invoice){
         if (err) return console.error(err);
-        console.log(invoice);
         chai.request(server)
             .put('/api/invoice/' + invoice.id)
             .send(expectedInvoice)

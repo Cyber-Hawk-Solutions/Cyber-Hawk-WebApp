@@ -142,7 +142,7 @@ block content
               span.fa-stack.fa-4x(style='font-size:50px;')
                 i.fa.fa-circle.fa-stack-2x.text-primary-dark
                 i.fa.fa-user.fa-stack-1x.fa-inverse
-              h4.service-heading(style='color:#333333;') Display of map data/ Geolocation
+              h4.service-heading(style='color:#333333;') Display of map data/Geolocation
               p.text-muted Display a map with data points.
     //- section
     //-   h2 Network Setup/ Maintenance 
@@ -155,7 +155,6 @@ block content
     //-             i.fa.fa-user.fa-stack-1x.fa-inverse
     //-           h4.service-heading(style='color:#333333;')
     //-           p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-
 block post-content
   section#estimate-result
       .container
@@ -169,7 +168,10 @@ block post-content
               h3
                 | Developer Days:
                 span#developer-days 0
-          .col.col-md-6.col-sm-12
+          .col.col-md-6.col-sm-12 
+            .row
+              if user
+                button#save-estimate.btn.btn-outline-primary.btn-block(type='button', userId=user.id) Save to Account
             .row
               .input-group.mb-3
                 input#estimate-email.form-control(type='text' placeholder='Email Address' aria-label='Email Address' aria-describedby='basic-addon2')

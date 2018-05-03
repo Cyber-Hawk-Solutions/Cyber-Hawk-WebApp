@@ -21,7 +21,7 @@ router.get('/', function(req, res, next) {
   Estimate.find(function (err, estimates){
     if (err) return console.error(err);
     res.json(estimates);    
-  });
+  }).sort('descending');
 });
 
 
@@ -36,14 +36,14 @@ router.get('/user/:userId', function(req, res, next) {
   Estimate.find({userId: req.params["userId"]}, function (err, estimate){
     if (err) return console.error(err);
     res.send(estimate);
-  });
+  }).sort('descending');
 });
 
 router.get('/email/:email', function(req, res, next) {
   Estimate.find({email: req.params["email"]}, function (err, estimates){
     if (err) return console.error(err);
     res.send(estimates);
-  });
+  }).sort('descending');
 });
 
 router.put('/:id', function(req, res, next) {

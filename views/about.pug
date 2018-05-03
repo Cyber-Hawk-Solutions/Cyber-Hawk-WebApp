@@ -1,0 +1,19 @@
+extends layout.pug
+
+block append styles
+  link(rel='stylesheet' href='assets/css/Services.css')
+block page-title
+  | About
+block content
+  section
+	h2.text-center About Us
+   section#services(style='padding-top:21px;padding-bottom:20px;')
+      .container
+        .row.text-center
+          .col-md-4
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary
+              i.fa.fa-mobile-phone.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Website/App
+            p Cyber Hawk Inc. was founded in 2017 by a group of coworkers who all have a passion of technology. We all have a special gift has it pertains to areas such as Networking, Mobile Development, Graphics, Cyber Security and Technical Repairs.
+

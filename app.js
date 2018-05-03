@@ -110,15 +110,15 @@ app.use('/api/estimate', estimateRouter);
 
 
 app.get('/', function(req, res) {
-  res.render('index.pug');
+  res.render('index.pug', {user: req.user});
 });
 
 app.get('/services', function(req, res) {
-  res.render('services');
+  res.render('services', {user: req.user});
 });
 
 app.get('/app-estimate', function(req, res) {
-  res.render('cost-estimator');
+  res.render('cost-estimator', {user: req.user});
 });
 
 //The 404 Route (ALWAYS Keep this as the last route)

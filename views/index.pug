@@ -14,19 +14,22 @@ block body
             li.nav-item(role='presentation')
               a.nav-link.active(href='services') Services
               li.nav-item(role='presentation')
-              a.nav-link(href='cost-estimator') Pricing
+              a.nav-link(href='app-estimate') Pricing
            
           form.form-inline.mr-auto(target='_self')
-            .form-group
-              label(for='search-field')
-                i.fa.fa-search
-              input#search-field.form-control.search-field(type='search' name='search')
-          span.navbar-text
-            // Button trigger modal
-            button.btn.btn-primary.login(type='button' data-toggle='modal' data-target='#exampleModal')
-              | Login
-
-          a.btn.btn-light.action-button(role='button' href='/signup') Sign Up
+            //- .form-group
+            //-   label(for='search-field')
+            //-     i.fa.fa-search
+            //-   input#search-field.form-control.search-field(type='search' name='search')
+          if !user
+            span.navbar-text
+              // Button trigger modal
+              button.btn.btn-primary.login(type='button' data-toggle='modal' data-target='#exampleModal')
+                | Login
+            a.btn.btn-light.action-button(role='button' href='/signup') Sign Up
+          else
+            span.navbar-text
+              a.dashboard-link.btn.btn-outline-light.action-button(href='dashboard' style='color:#dddddd;') Dashboard
     .container.hero
       .row
         .col-12.col-lg-6.col-xl-5.offset-xl-1
