@@ -56,50 +56,11 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-//handling user sign up
-app.get('/signup', function(req, res) {
-  res.render('signup');
-});
 
-app.post("/signup", function(req, res){
-  User.register(new User({username:req.body.username}),req.body.password, function(err, user){
-    if(err){
-      console.log(err);
-      return res.render('signup');
-    } //user stragety
-    passport.authenticate("local")(req, res, function(){
-        res.redirect("/dashboard"); //once the user sign up
-    }); 
-  });
-});
 
 //************************************************
 
-//login route
-app.get('/login', function(req, res) {
-  res.render('login');
-});
 
-/*
-passport.use('local-login', new LocalStrategy({
-  // by default, local strategy uses username and password, we will override with email
-  usernameField : 'email',
-  passwordField : 'password',
-  passReqToCallback : true // allows us to pass back the entire request to the callback
-}),
-*/
-
-// middleware
-app.post("/login", function(req,res){
-  console.log(reindex.pugq.body);
-  passport.authenticate('local')(req, res, function(){
-    res.redirect("/dashboard"); //once the user sign up
-    console.log(res);
-  }); 
-});
-
-
-//require('./config/passport')(passport); // pass passport for configuration
 
 //routes
 require('./routes/route.js')(app, passport); // load our routes and pass in our app and fully configured passport

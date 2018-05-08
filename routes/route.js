@@ -9,18 +9,20 @@ module.exports = function(app, passport) {
   // =====================================
   // LOGIN ===============================
   // =====================================
-  // show the login form
-  //app.get('/login', function(req, res) {
-
-      // render the page and pass in any flash data if it exists
- //     res.render('login.ejs', { message: req.flash('loginMessage') }); 
-//  });
 
   // process the login form
-   app.post('/login', function(req,res){
-        console.log(req);
-        res.render('login');
-   });
+
+  //login route
+  app.get('/login', function(req, res) {
+    res.render('login');
+  });
+
+  app.post("/login", function(req,res){
+    passport.authenticate('local')(req, res, function(){
+      res.redirect("/dashboard"); //once the user sign up
+      console.log(res);
+    }); 
+  });
 /*
   // =====================================
   // SIGNUP ==============================
@@ -60,12 +62,23 @@ module.exports = function(app, passport) {
       res.redirect('/');
   });
 
-  app.post('/signup', passport.authenticate('local-signup', {
-    successRedirect : '/dashboard', // redirect to the secure profile section
-    failureRedirect : '/signup', // redirect back to the signup page if there is an error
-    failureFlash : true // allow flash messages
-  }));
-};
+  //handling user sign up
+app.get('/signup', function(req, res) {
+  res.render('signup');
+});
+
+app.post("/signup", function(req, res){
+  User.register(new User({username:req.body.username}),req.body.password, function(err, user){
+    if(err){
+      console.log(err);
+      return res.render('signup');
+    } //user stragety
+    passport.authenticate("local")(req, res, function(){
+        res.redirect("/dashboard"); //once the user sign up
+    }); 
+  });
+});
+
 
 // route middleware to make sure a user is logged in
 function isLoggedIn(req, res, next) {
@@ -79,6 +92,6 @@ function isLoggedIn(req, res, next) {
   res.redirect('/login');
 }
 
-// process the signup form
 
 
+};

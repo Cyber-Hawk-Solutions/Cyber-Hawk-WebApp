@@ -24,7 +24,8 @@ block body
           if !user
             span.navbar-text
               // Button trigger modal
-              button.btn.btn-primary.login(type='button' data-toggle='modal' data-target='#exampleModal')
+              //button.btn.btn-primary.login(type='button' data-toggle='modal' data-target='#exampleModal')
+              a.btn.btn-primary.login(role='button' href='/login')
                 | Login
             a.btn.btn-light.action-button(role='button' href='/signup') Sign Up
           else
