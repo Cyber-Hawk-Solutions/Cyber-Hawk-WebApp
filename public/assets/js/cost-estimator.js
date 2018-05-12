@@ -3,24 +3,34 @@ const servicePeriods = {
   'small': {title:'small', period: 10},
   'medium': {title:'medium', period: 20},
   'large': {title:'large', period: 30},
-  'email/password sign up': {title:'email/password sign up', period:2},
+  'email/ password sign up': {title:'email/ password sign up', period:2},
   'third party login': {title:'third party login', period:3},
   'user invitation emails': {title:'user invitation emails', period:3},
   'multi-tenant accounts': {title:'multi-tenant accounts', period:7},
   'dashboard': {title:'dashboard', period:5},
   'activity feed': {title:'activity feed', period:4},
-  'file uploading': {title:'file uploading', period:30},
+  'file uploading': {title:'file uploading', period:2},
   'activity feed': {title:'activity feed', period:4},
   'file uploading': {title:'file uploading', period:2},
   'tags': {title:'tags', period:3},
   'free text searching': {title:'free text searching', period:5},
   'ratings/reviews': {title:'ratings/reviews', period:4},
   'calendering': {title:'calendering', period:5},
-  'display of map data/geolocation':{title:'display of map data/geolocation', period:4}
+  'display of map data/geolocation':{title:'display of map data/geolocation', period:3},
+  'messaging': {title:'messaging', period:3},
+  'forums or commenting': {title:'forums or commenting', period:4},
+  'shopping cart': {title:'shopping cart', period:5},
+  'payment processing': {title:'payment processing', period:7},
+  'subscription plans': {title:'subscription plans', period:2},
+  'product management': {title:'product management', period:4},
+  'cms integration': {title:'cms integration', period:5},
+  'usage analytics': {title:'usage analytics', period:4},
+  'user admin pages': {title:'user admin pages', period:2},
+  'moderation /content approval': {title:'moderation /content approval', period:2}
 };
 
 let selectedServices = {};
-let dayRate = 100;
+let dayRate = 80;
 
 $(document).ready(function(){
 

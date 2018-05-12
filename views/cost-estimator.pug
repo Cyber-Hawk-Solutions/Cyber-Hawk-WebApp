@@ -10,15 +10,15 @@ block page-title
   .card.header-card.align-self-center
     .card-body
       .row.text-center
-        .col.rounded.selected-light
+        .col.col-6.rounded.selected-light
           span.fa-stack.fa-4x(style='font-size:40px;')
             i.fa.fa-circle.fa-stack-2x.text-primary
             i.fa.fa-laptop.fa-stack-1x.fa-inverse
           h4.service-heading(style='color:#333333;') Website
-        .col.rounded
+        .col.col-6.rounded
           span.fa-stack.fa-4x(style='font-size:40px;')
             i.fa.fa-circle.fa-stack-2x.text-secondary
-            i.fa.fa-mobile-phone.fa-stack-1x.fa-inverse
+            i.fa.fa-mobile-alt.fa-stack-1x.fa-inverse
           h4.service-heading(style='color:#333333;') App
 
 block content
@@ -30,19 +30,19 @@ block content
           .col-md-4.service-item
             span.fa-stack.fa-4x(style='font-size:50px;')
               i.fa.fa-circle.fa-stack-2x.text-primary-dark
-              i.fa.fa-mobile-phone.fa-stack-1x.fa-inverse
+              i.fas.fa-window-maximize.fa-stack-1x.fa-inverse
             h4.service-heading(style='color:#333333;') Small
             p.text-muted 4-5 Key Feature Pages.
           .col-md-4.service-item
             span.fa-stack.fa-4x(style='font-size:50px;')
               i.fa.fa-circle.fa-stack-2x.text-primary-dark
-              i.fa.fa-desktop.fa-stack-1x.fa-inverse
+              i.far.fa-window-maximize.fa-stack-1x.fa-inverse
             h4.service-heading(style='color:#333333;') Medium
             p.text-muted 6-9 Key Feature Pages.
           .col-md-4.service-item
             span.fa-stack.fa-4x(style='font-size:50px;')
               i.fa.fa-circle.fa-stack-2x.text-primary-dark
-              i.fa.fa-server.fa-stack-1x.fa-inverse
+              i.far.fa-window-restore.fa-stack-1x.fa-inverse
             h4.service-heading(style='color:#333333;') Large
             p.text-muted 10-15 key Feature Pages.
   section
@@ -53,25 +53,25 @@ block content
           .col-md-3.service-item
             span.fa-stack.fa-4x(style='font-size:50px;')
               i.fa.fa-circle.fa-stack-2x.text-primary-dark
-              i.fa.fa-mobile-phone.fa-stack-1x.fa-inverse
-            h4.service-heading(style='color:#333333;') Email/Password Sign Up
+              i.fa.fa-user.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Email/ Password Sign Up
             p.text-muted User sign up and login with email and password.
           .col-md-3.service-item
             span.fa-stack.fa-4x(style='font-size:50px;')
               i.fa.fa-circle.fa-stack-2x.text-primary-dark
-              i.fa.fa-laptop.fa-stack-1x.fa-inverse
+              i.fa.fa-key.fa-stack-1x.fa-inverse
             h4.service-heading(style='color:#333333;') Third Party Login
             p.text-muted Sign up/login with facebook, google, etc. accounts.
           .col-md-3.service-item
             span.fa-stack.fa-4x(style='font-size:50px;')
               i.fa.fa-circle.fa-stack-2x.text-primary-dark
-              i.fa.fa-desktop.fa-stack-1x.fa-inverse
+              i.fa.fa-envelope.fa-stack-1x.fa-inverse
             h4.service-heading(style='color:#333333;') User Invitation Emails
             p.text-muted New users can be invited via emails.
           .col-md-3.service-item
             span.fa-stack.fa-4x(style='font-size:50px;')
               i.fa.fa-circle.fa-stack-2x.text-primary-dark
-              i.fa.fa-desktop.fa-stack-1x.fa-inverse
+              i.fa.fa-sitemap.fa-stack-1x.fa-inverse
             h4.service-heading(style='color:#333333;') Multi-tenant Accounts
             p.text-muted Account based signups, each with their own administrators and users
   section
@@ -82,79 +82,156 @@ block content
           .col-md-3.service-item
             span.fa-stack.fa-4x(style='font-size:50px;')
               i.fa.fa-circle.fa-stack-2x.text-primary-dark
-              i.fa.fa-mobile-phone.fa-stack-1x.fa-inverse
+              i.fa.fa-columns.fa-stack-1x.fa-inverse
             h4.service-heading(style='color:#333333;') Dashboard
             p.text-muted Usually the first thing a logged in user sees. May summarize data and perharps show graphs and notices.
-          .col-md-.service-item
+          .col-md-3.service-item
             span.fa-stack.fa-4x(style='font-size:50px;')
               i.fa.fa-circle.fa-stack-2x.text-primary-dark
-              i.fa.fa-desktop.fa-stack-1x.fa-inverse
+              i.fa.fa-list-ul.fa-stack-1x.fa-inverse
             h4.service-heading(style='color:#333333;') Activity Feed
             p.text-muted Shows what the user has been up to recently.
           .col-md-3.service-item
             span.fa-stack.fa-4x(style='font-size:50px;')
               i.fa.fa-circle.fa-stack-2x.text-primary-dark
-              i.fa.fa-server.fa-stack-1x.fa-inverse
+              i.fa.fa-cloud-upload-alt.fa-stack-1x.fa-inverse
             h4.service-heading(style='color:#333333;') File Uploading
             p.text-muted Users can upload files (images, pdfs, etc.).
           .col-md-3.service-item
             span.fa-stack.fa-4x(style='font-size:50px;')
               i.fa.fa-circle.fa-stack-2x.text-primary-dark
-              i.fa.fa-server.fa-stack-1x.fa-inverse
+              i.fa.fa-user-circle.fa-stack-1x.fa-inverse
             h4.service-heading(style='color:#333333;') User Profiles
             p.text-muted Users can have their own page with a customizable profile.
           .col-md-3.service-item
             span.fa-stack.fa-4x(style='font-size:50px;')
               i.fa.fa-circle.fa-stack-2x.text-primary-dark
-              i.fa.fa-server.fa-stack-1x.fa-inverse
-            h4.service-heading(style='color:#333333;') File Uploading
-            p.text-muted Users can upload files (images, pdfs, etc.).
-          .col-md-3.service-item
-            span.fa-stack.fa-4x(style='font-size:50px;')
-              i.fa.fa-circle.fa-stack-2x.text-primary-dark
-              i.fa.fa-server.fa-stack-1x.fa-inverse
+              i.fa.fa-tag.fa-stack-1x.fa-inverse
             h4.service-heading(style='color:#333333;') Tags
             p.text-muted Categorize information to find them easier.
           .col-md-3.service-item
             span.fa-stack.fa-4x(style='font-size:50px;')
               i.fa.fa-circle.fa-stack-2x.text-primary-dark
-              i.fa.fa-server.fa-stack-1x.fa-inverse
+              i.fa.fa-search.fa-stack-1x.fa-inverse
             h4.service-heading(style='color:#333333;') Free Text searching
             p.text-muted Giving users the ability to do generic site searches.
           .col-md-3.service-item
             span.fa-stack.fa-4x(style='font-size:50px;')
               i.fa.fa-circle.fa-stack-2x.text-primary-dark
-              i.fa.fa-server.fa-stack-1x.fa-inverse
+              i.fa.fa-star.fa-stack-1x.fa-inverse
             h4.service-heading(style='color:#333333;') Ratings/Reviews
             p.text-muted Allows for restaurant/product and customer satisfaction reviews.
-    section
-      h2 Dates/ Locations
-      section.service-row(style='padding-top:21px;padding-bottom:20px;')
-        .container
-          .row.text-center
-            .col-md-4.service-item
-              span.fa-stack.fa-4x(style='font-size:50px;')
-                i.fa.fa-circle.fa-stack-2x.text-primary-dark
-                i.fa.fa-user.fa-stack-1x.fa-inverse
-              h4.service-heading(style='color:#333333;') Calendering
-              p.text-muted Display and capture of data in calender format.
-            .col-md-4.service-item
-              span.fa-stack.fa-4x(style='font-size:50px;')
-                i.fa.fa-circle.fa-stack-2x.text-primary-dark
-                i.fa.fa-user.fa-stack-1x.fa-inverse
-              h4.service-heading(style='color:#333333;') Display of map data/Geolocation
-              p.text-muted Display a map with data points.
-    //- section
-    //-   h2 Network Setup/ Maintenance 
-    //-   section.service-row(style='padding-top:21px;padding-bottom:20px;')
-    //-     .container
-    //-       .row.text-center
-    //-         .col-md-4
-    //-           span.fa-stack.fa-4x(style='font-size:50px;')
-    //-             i.fa.fa-circle.fa-stack-2x.text-primary-dark
-    //-             i.fa.fa-user.fa-stack-1x.fa-inverse
-    //-           h4.service-heading(style='color:#333333;')
-    //-           p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  section
+    h2 Dates/ Locations
+    section.service-row(style='padding-top:21px;padding-bottom:20px;')
+      .container
+        .row.text-center
+          .col-md-4.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-calendar-alt.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Calendering
+            p.text-muted Display and capture of data in calender format.
+          .col-md-4.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-map-marker-alt.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Display of map data/Geolocation
+            p.text-muted Display a map with data points.
+          .col-md-4.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-calendar-plus.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Bookings
+            p.text-muted Selecting dates, managing capacity etc.
+  section
+    h2 Social
+    section.service-row(style='padding-top:21px;padding-bottom:20px;')
+      .container
+        .row.text-center
+          .col-md-4.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-envelope.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Messaging
+            p.text-muted Users direct message eachother or contribute to chatrooms.
+          .col-md-4.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-comments.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Forums or Commenting
+            p.text-muted Expansive forum functionality.
+  section
+    h2 E-Commerce
+    section.service-row(style='padding-top:21px;padding-bottom:20px;')
+      .container
+        .row.text-center
+          .col-md-4.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-shopping-cart.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Shopping Cart
+            p.text-muted Users browse and add products to a cart.
+          .col-md-4.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-credit-card.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Payment Processing
+            p.text-muted You will process payments from users and manage refunds etc.
+          .col-md-4.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.far.fa-credit-card.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Subscription plans
+            p.text-muted Customer Pay at regular intervals.
+          .col-md-4.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-store.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Product Management
+            p.text-muted Ability to manage product listings and data.
+  section
+    h2 Admin and Analytics
+    section.service-row(style='padding-top:21px;padding-bottom:20px;')
+      .container
+        .row.text-center
+          .col-md-4.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-columns.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') CMS Integration
+            p.text-muted A content management system would allow editing of key parts the static content without developer intervention.
+          .col-md-4.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-chart-pie.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Usage Analytics
+            p.text-muted Find out where your users come from and how they use your app.
+          .col-md-4.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-user-tie.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') User Admin Pages
+            p.text-muted Account administrators would be able to list/add/remove/suspend users.
+          .col-md-4.service-item
+            span.fa-stack.fa-4x(style='font-size:50px;')
+              i.fa.fa-circle.fa-stack-2x.text-primary-dark
+              i.fa.fa-user-edit.fa-stack-1x.fa-inverse
+            h4.service-heading(style='color:#333333;') Moderation /Content Approval
+            p.text-muted Administers review content submitted by users.
+
+//-section
+//-   h2 Network Setup/ Maintenance 
+//-   section.service-row(style='padding-top:21px;padding-bottom:20px;')
+//-     .container
+//-       .row.text-center
+//-         .col-md-4
+//-           span.fa-stack.fa-4x(style='font-size:50px;')
+//-             i.fa.fa-circle.fa-stack-2x.text-primary-dark
+//-             i.fa.fa-user.fa-stack-1x.fa-inverse
+//-           h4.service-heading(style='color:#333333;')
+//-           p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit..
+
 block post-content
   section#estimate-result
       .container
@@ -162,11 +239,12 @@ block post-content
           .col.col-md-6
             .row
               h2
-                | Total Cost: 
+                | Total Cost: $
                 span#total-cost 0
+                span  EC
             .row
               h3
-                | Developer Days:
+                | Developer Days: 
                 span#developer-days 0
           .col.col-md-6.col-sm-12 
             .row
