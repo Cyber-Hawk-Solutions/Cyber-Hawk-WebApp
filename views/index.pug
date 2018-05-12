@@ -24,8 +24,8 @@ block body
           if !user
             span.navbar-text
               // Button trigger modal
-              //button.btn.btn-primary.login(type='button' data-toggle='modal' data-target='#exampleModal')
-              a.btn.btn-primary.login(role='button' href='/login')
+              //a.btn.btn-primary.login(role='button' href='/login')
+              button.btn.btn-primary.login(type='button' data-toggle='modal' data-target='#loginModal')
                 | Login
             a.btn.btn-light.action-button(role='button' href='/signup') Sign Up
           else
@@ -151,19 +151,20 @@ block body
       //img(src='assets/img/pinterest.png')
       //img(src='assets/img/twitter.png')
     // Modal
-  #exampleModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+  #loginModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='loginModal' aria-hidden='true')
     .modal-dialog.modal-dialog-centered(role='document')
       .modal-content
-        .modal-header
-          h5#exampleModalLabel.modal-title Login
-           img(src='assets/img/Cyber Hawk Logo.png' alt='Cyber Hawk Logo' width='65' height='65') 
-          button.close(type='button' data-dismiss='modal' aria-label='Close')
-            span(aria-hidden='true') &times;
-        .modal-body
-          input.form-control(type='text' placeholder='Username' aria-label='Username' aria-describedby='basic-addon1')
-          input.form-control(type='text' placeholder='Password' aria-label='Password' aria-describedby='basic-addon2')
-        .modal-footer
-          button.btn.btn-primary(type='button' data-dismiss='modal') Login
+          .modal-header
+            h5#exampleModalLabel.modal-title Login
+            img(src='assets/img/Cyber Hawk Logo.png' alt='Cyber Hawk Logo' width='65' height='65') 
+            button.close(type='button' data-dismiss='modal' aria-label='Close')
+              span(aria-hidden='true') &times;
+          form(method='POST' action='/login')
+            .modal-body
+              input.form-group.form-control(type='text' name='username' placeholder='Username' aria-label='Username' aria-describedby='basic-addon1')
+              input.form-group.form-control(type='password' name='password' placeholder='Password' aria-label='Password' aria-describedby='basic-addon2')
+            .modal-footer
+              button.btn.btn-primary(type='submit' ) Login
 block append scripts 
   script(src='/assets/js/App-Features-Carousel.js')
 
