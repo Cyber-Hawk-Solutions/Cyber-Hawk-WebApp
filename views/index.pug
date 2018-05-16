@@ -1,5 +1,8 @@
 extends layout.pug
 
+block append styles
+  link(rel='stylesheet' href='assets/css/Footer-Dark.css')
+  
 block body
   div.header-blue
     nav.navbar.navbar-dark.navbar-expand-md.navigation-clean-search
@@ -36,8 +39,11 @@ block body
         .col-12.col-lg-6.col-xl-5.offset-xl-1
           h1 The Cyber Hawk revolution is here.
           p
-            | Welcome to the Cyber Hawk webpage! Need help in implimenting an IT system or maybe building a website you are in the right place.
-          button.btn.btn-light.btn-lg.action-button(type='button') Learn More
+            | Local experts from every field of IT came together.  
+            br
+            | The purpose - to help businesses grow and build things people use.
+          a(href='#services')
+            button.btn.btn-light.btn-lg.action-button(type='button') Our Services
         .col-md-5.col-lg-5.offset-lg-1.offset-xl-0.d-none.d-lg-block.phone-holder
           .iphone-mockup
             img.device(src='assets/img/iphone.svg')
@@ -45,37 +51,37 @@ block body
   .features-clean
     .container
       .intro
-        h2.text-center Services 
+        h2#services.text-center Cyber Hawk is an IT company, digital agency and engineering hub.
         p.text-center
-          | We offer a number of I.T services and our quality assurance is guaranteed.
+          | We believe that you should feel confident that you're getting professional level IT services.
       .row.features
         .col-sm-6.col-lg-4.item
-          i.fa.fa-map-marker.icon
+          i.far.fa-window-maximize.icon
           h3.name Website Development
           p.description
             | We do both front end as well as back end development. So you can rest assure that your new website will be equipt with the most up to date features on the market today.
         .col-sm-6.col-lg-4.item
-          i.fa.fa-clock-o.icon
+          i.fa.fa-user-secret.icon
           h3.name Cyber Security
           p.description
             | In a world where technology is every changing, you want to be sure that hackers and other malicious predators cannot access your information. 
         .col-sm-6.col-lg-4.item
-          i.fa.fa-list-alt.icon
+          i.fa.fa-toolbox.icon
           h3.name Computer Repairs
           p.description
             | Is your device or computer broken ? no worries we can diagnose and resolve these issues. We also install operating systems and special softwares.
         .col-sm-6.col-lg-4.item
-          i.fa.fa-leaf.icon
+          i.fa.fa-image.icon
           h3.name Graphic Designing
           p.description
             | Graphic helps to set the tone for how we look at a business and also attracts us to what they have to offer. At Cyber Hawk be offer logo designing, Company Branding and other graphic related services.
         .col-sm-6.col-lg-4.item
-          i.fa.fa-plane.icon
+          i.fa.fa-sitemap.icon
           h3.name Networking
           p.description
             |From home to office we will offer all your networking needs.
         .col-sm-6.col-lg-4.item
-          i.fa.fa-phone.icon
+          i.fa.fa-mobile-alt.icon
           h3.name Mobile Development
           p.description
             | In a enviroment that has an ever increase mobile presence stay above the rest with a mobile app.
@@ -86,8 +92,13 @@ block body
           .intro
             h2 Contact Us
             p
-              | Have questions or require our services? Hit us up via email: cyberhawk@gmail.com or ring us: (268)480-2420
-            
+              | We would like to get to know you and your business in order to create solutions that you'll love. 
+              br
+              br
+              | Call: +1 (268) 764-8480
+              br
+              | Email: 
+              a(href='mailto:CyberHawkSolutions@gmail.com') CyberHawkSolutions@gmail.com
         .col-sm-4
           .d-none.d-md-block.iphone-mockup
             img.device(src='assets/img/iphone.svg')
@@ -96,32 +107,64 @@ block body
     .container
       .row
         .col-lg-12.text-center(style='padding:0px;height:137px;')
-          h2.section-heading Our Features
-          h3.section-subheading.text-muted Here's what makes us different 
+          h2.section-heading Lets Push Boundaries
+          h3.section-subheading.text-muted Making your brand vision become a reality is what we do but why not push your idea further?
       .row.text-center
         .col-md-4
           span.fa-stack.fa-4x
             i.fa.fa-circle.fa-stack-2x.text-primary
-            i.fa.fa-shopping-cart.fa-stack-1x.fa-inverse
-          h4.service-heading Reliability
+            i.fa.fa-user-tie.fa-stack-1x.fa-inverse
+          h4.service-heading Consulting
           p.text-muted
-            | Don't worry we will meet your goals and deadlines in a timely manner
+            | Want to know how to make your ideas a reality? Get professional advice backed by experienced innovators. 
         .col-md-4
           span.fa-stack.fa-4x
             i.fa.fa-circle.fa-stack-2x.text-primary
-            i.fa.fa-laptop.fa-stack-1x.fa-inverse
-          h4.service-heading Experience
+            i.fa.fa-project-diagram.fa-stack-1x.fa-inverse
+          h4.service-heading Project management and execution
           p.text-muted
-            | Our team is full of knowledge and experience, as we have had many years of hands on application to our craft.
+            | Talk to us and lets get your project started or back on track.
         .col-md-4
           span.fa-stack.fa-4x
             i.fa.fa-circle.fa-stack-2x.text-primary
-            i.fa.fa-lock.fa-stack-1x.fa-inverse
-          h4.service-heading Professionalism
+            i.fa.fa-store-alt.fa-stack-1x.fa-inverse
+          h4.service-heading Your needs first
           p.text-muted
-            | We handle and treat you with care and courtesy.
-  
-  //.register-photo
+            | We will beat anyone else's price while providing much more. 
+  .footer-dark
+    footer
+      .container
+        .row
+          .col-sm-6.col-md-3.item
+            h3 Services
+            ul
+              li
+                a(href='#') Web design
+              li
+                a(href='#') Development
+              li
+                a(href='#') Hosting
+          .col-sm-6.col-md-3.item
+            h3 About
+            ul
+              li
+                a(href='/about') Company
+              li
+                a(href='#') Team
+          .col-md-6.item.text
+            h3 Contact Us
+            p
+              | 1(268)480-2420
+          .col.item.social
+            a(href='#')
+              i.icon.ion-social-facebook
+            a(href='#')
+              i.icon.ion-social-twitter
+            a(href='#')
+              i.icon.ion-social-snapchat
+            a(href='#')
+              i.icon.ion-social-instagram
+        p.copyright Cyber Hawk Inc. &copy; 2018
     //.form-container
       //.image-holder
       //form(method='post')
