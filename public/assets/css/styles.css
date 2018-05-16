@@ -44,10 +44,13 @@ h3 {
   border-color: #f8f9fa;
 }
 
-.card {
+.light-trans-bg {
   background-color: rgba(255, 255, 255, 0.42) !important;
 }
 
+.light-bg {
+  background-color: rgba(255, 255, 255, 0.71) !important;
+}
 .main .card .card-body {
   padding: 3.25rem !important;
 } 
@@ -78,6 +81,10 @@ h3 {
   color: #003847 !important;
 }
 
+.service-item {
+  padding-top: 15px;
+}
+
 .card .selected-success p {
   color: #018ca7 !important;
 }
@@ -86,10 +93,15 @@ h3 {
   padding-left: 10px;
 }
 
+.single-page-content {
+  padding: 2rem 3rem 2rem 3rem;
+}
+
 .service-heading {
   width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-top: 10px;
 }
 
 #estimate-result {

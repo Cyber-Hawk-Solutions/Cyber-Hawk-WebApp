@@ -73,6 +73,7 @@ $(document).ready(function(){
       $.post("api/email/estimate", estimate, function(res){
         if (res.isSent){
           showEmailSentMessage();
+          $.post("api/estimate", estimate);
         }
         else {
           showEmailFailedMessage();
