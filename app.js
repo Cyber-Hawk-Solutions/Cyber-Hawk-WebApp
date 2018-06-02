@@ -30,7 +30,7 @@ var app = express();
 
 // view engine setup
 app.set('view engine', 'pug');
-app.set('views', './views');
+app.set('views', path.join(__dirname, 'views'));
 app.set('view options', { debug: true })
 
 
@@ -51,6 +51,8 @@ app.use(require("express-session")({
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
+app.use('/favicon.ico', express.static('public/favicon.ico'));
+
 
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
@@ -59,7 +61,6 @@ passport.deserializeUser(User.deserializeUser());
 
 
 //************************************************
-
 
 
 //routes
@@ -71,7 +72,7 @@ app.use('/api/estimate', estimateRouter);
 
 
 app.get('/', function(req, res) {
-  res.render('index.pug', {user: req.user});
+  res.render('./home/index', {user: req.user});
 });
 
 app.get('/services', function(req, res) {
@@ -85,7 +86,7 @@ app.get('/app-estimate', function(req, res) {
 //The 404 Route (ALWAYS Keep this as the last route)
 app.use(function (req, res, next) {
   res.status(404);
-  res.render('index.pug');
+  res.render('./home/index');
 })
 
 
