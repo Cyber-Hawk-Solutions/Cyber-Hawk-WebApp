@@ -82,7 +82,7 @@ $(document).ready(function(){
     }
   }
 
-  function toggleItemSelection(item){
+  function toggleItemSelection(item){p
     $(item).toggleClass("selected-success rounded");
 
     let serviceTitle = ($(item)[0].children[1].innerText).toLowerCase();
