@@ -4,7 +4,7 @@ var nodemailer = require('nodemailer');
 let mongoose = require('mongoose');
 var pug = require('pug');
 
-var account = { 'email': 'cyberhawktestemail@gmail.com', 'password': 'Password100'};
+var account = { 'email': 'cyberhawktestemail@gmail.com', 'password': 'securePassword100'};
 
 // create reusable transporter object using the default SMTP transport
 var estimate = {
