@@ -30,7 +30,7 @@ const servicePeriods = {
 };
 
 let selectedServices = {};
-let dayRate = 80;
+let dayRate = 120;
 
 $(document).ready(function(){
 
