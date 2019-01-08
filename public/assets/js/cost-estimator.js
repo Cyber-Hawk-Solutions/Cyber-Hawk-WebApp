@@ -30,7 +30,8 @@ const servicePeriods = {
 };
 
 let selectedServices = {};
-let dayRate = 120;
+let dayRate = 90;
+let startingPrice = 1500;
 
 $(document).ready(function(){
 
@@ -102,6 +103,7 @@ $(document).ready(function(){
     let estimate = {
       "services": services,
       "cost": cost,
+      "startingPrice": startingPrice,
       "period": period
     }
 
@@ -131,7 +133,7 @@ $(document).ready(function(){
   }
 
   function calculateTotalCost(services, dayRate){
-    let totalCost = (calculateTotalPeriod(services)) * dayRate;
+    let totalCost = startingPrice + (calculateTotalPeriod(services)) * dayRate;
     return totalCost;
   }
 
