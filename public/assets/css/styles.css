@@ -4,6 +4,8 @@ html, body {
 
 body {
   background-color: #f7f9f9;
+  font-family: 'Source Sans Pro', sans-serif;
+  font: 'Source Sans Pro', sans-serif;
 }
 
 .text-primary {
@@ -123,4 +125,8 @@ h3 {
 
 #save-estimate {
   margin-bottom: 15px;
+}
+
+.text-muted {
+  font-size: 1.3em;
 }

@@ -220,3 +220,7 @@
   opacity:0.2;
 }
 
+.nav-link {
+  font-size: 1.6em;
+  font-family: 'Source Sans Pro', sans-serif;
+}
