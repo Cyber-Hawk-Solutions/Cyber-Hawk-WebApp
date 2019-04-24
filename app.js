@@ -7,7 +7,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var pug = require('pug');
 var port = process.env.PORT || 3000;
 var passport = require('passport');
 let LocalStrategy = require("passport-local");
@@ -29,7 +28,7 @@ var estimateRouter = require('./routes/estimates');
 var app = express();
 
 // view engine setup
-app.set('view engine', 'pug');
+app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view options', { debug: true })
 
@@ -72,7 +71,11 @@ app.use('/api/estimate', estimateRouter);
 
 
 app.get('/', function(req, res) {
-  res.render('./home/index', {user: req.user});
+  res.render('./index', {user: req.user});
+});
+
+app.get('/pricing', function(req, res) {
+  res.render('./websitecosting', {user: req.user});
 });
 
 app.get('/services', function(req, res) {

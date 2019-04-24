@@ -194,7 +194,7 @@
 .irs-bar {
     height: 8px;
     top: 25px;
-    background-color: #1ABC9C;
+    background-color: #018ca7;
     border-radius: 100px
 }
     .irs-bar-edge {
@@ -239,7 +239,7 @@
     line-height: 1.333;
     text-shadow: none;
     padding: 3px;
-    background: #1ABC9C;
+    background: #018ca7;
     -moz-border-radius: 2px;
     border-radius: 2px;
 }
@@ -255,7 +255,7 @@
     margin-left: -3px;
     overflow: hidden;
     border: 3px solid transparent;
-    border-top-color: #1ABC9C;
+    border-top-color: #018ca7;
 }
 
 .lt-ie9 .irs-from, .lt-ie9 .irs-to, .lt-ie9 .irs-single { background: #DDD; }

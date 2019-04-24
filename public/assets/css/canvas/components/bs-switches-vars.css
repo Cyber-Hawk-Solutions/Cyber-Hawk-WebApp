@@ -89,7 +89,7 @@
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-themecolor,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-themecolor {
 	color: #FFF;
-	background: #1ABC9C;
+	background: #018ca7;
 	background: var(--themecolor);
 }
 
@@ -289,7 +289,7 @@ input.switch-toggle-round + label:after {
 }
 
 input.switch-toggle-round:checked + label:before {
-	background-color: #1ABC9C;
+	background-color: #018ca7;
 	background-color: var(--themecolor);
 }
 input.switch-toggle-round:checked + label:after { margin-left: 30px; }
@@ -418,13 +418,13 @@ input.switch-toggle-flat + label:after {
 }
 
 input.switch-toggle-flat:checked + label {
-	background-color: #1ABC9C;
+	background-color: #018ca7;
 	background-color: var(--themecolor);
 }
 
 input.switch-toggle-flat:checked + label:after {
 	margin-left: 30px;
-	background-color: #1ABC9C;
+	background-color: #018ca7;
 	background-color: var(--themecolor);
 }
 

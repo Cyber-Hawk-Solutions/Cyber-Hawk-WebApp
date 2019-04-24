@@ -462,7 +462,7 @@
 		background-color: transparent !important;
 		font-weight: 700;
 		padding-left: 5px;
-		color: #1ABC9C;
+		color: #018ca7;
 	}
 
 	#primary-menu ul li .mega-menu-content,
@@ -525,10 +525,10 @@
 
 	#primary-menu ul li .mega-menu-content.style-2 ul.mega-menu-column > li.mega-menu-title:hover > a {
 		background-color: transparent;
-		color: #1ABC9C !important;
+		color: #018ca7 !important;
 	}
 
-	#primary-menu ul li .mega-menu-content.style-2 ul.mega-menu-column > li.mega-menu-title > a:hover { color: #1ABC9C !important; }
+	#primary-menu ul li .mega-menu-content.style-2 ul.mega-menu-column > li.mega-menu-title > a:hover { color: #018ca7 !important; }
 
 	#primary-menu ul li .mega-menu-content.style-2 li { border-top: 1px solid #EEE; }
 
@@ -634,7 +634,7 @@
 		left: auto;
 		right: 15px;
 		height: auto;
-		background-color: #1ABC9C;
+		background-color: #018ca7;
 		z-index: 11;
 	}
 
@@ -1203,7 +1203,7 @@
 		border-radius: 2px !important;
 	}
 
-	.portfolio-filter li a:hover { color: #1ABC9C; }
+	.portfolio-filter li a:hover { color: #018ca7; }
 
 	.portfolio-filter li.activeFilter a {
 		color: #FFF;

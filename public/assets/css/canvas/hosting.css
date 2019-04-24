@@ -11,7 +11,7 @@
 .slider-element {
 	height: 600px;
 	overflow: visible;
-	background-color: #44AAAC;
+	background-color: #018ca7;
 }
 
 .slider-title h2 {
@@ -273,7 +273,7 @@ body.top-search-open #header .button { opacity: 0; }
 	-webkit-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
 	border-radius: 50%;
-	background: #44aaac;
+	background: #018ca7;
 	opacity: 0;
 	z-index: -1;
 	-webkit-animation: pulsate 3.5s ease-out infinite;
@@ -382,7 +382,7 @@ body.top-search-open #header .button { opacity: 0; }
 .irs-single { top: -12px; }
 
 .irs-slider {
-	background: #44aaac;
+	background: #018ca7;
 	border-radius: 50%;
 	width: 28px;
 	height: 28px;
@@ -468,7 +468,7 @@ body.top-search-open #header .button { opacity: 0; }
 	-ms-transform: skewY(-1.5deg);
 	-o-transform: skewY(-1.5deg);
 	transform: skewY(-1.5deg);
-	background-color: #44aaac;
+	background-color: #018ca7;
 	z-index: 1;
 }
 
