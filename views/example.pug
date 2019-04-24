@@ -1,0 +1,429 @@
+extends layout.pug
+
+block append styles
+    link(href='http://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Istok+Web:400,700' rel='stylesheet')
+    link(rel='stylesheet' href='assets/css/canvas/bootstrap.css')
+    link(rel='stylesheet' href='assets/css/style.css')
+    link(rel='stylesheet' href='assets/css/canvas/dark.css')
+    link(rel='stylesheet' href='assets/css/canvas/font-icons.css')
+    link(rel='stylesheet' href='assets/css/canvas/animate.css')
+    link(rel='stylesheet' href='assets/css/canvas/magnific-popup.css')
+    link(rel='stylesheet' href='assets/css/canvas/components/ion.rangeslider.css')
+    link(rel='stylesheet' href='assets/css/canvas/responsive.css')
+    link(rel='stylesheet' href='assets/css/canvas/colors.php?color=44aaac')
+    link(rel='stylesheet' href='assets/hosting/css/fonts.css')
+    link(rel='stylesheet' href='assets/hosting/hosting.css')
+    
+    #wrapper.clearfix
+      #top-bar.center.dark(style='background-color: #15888a')
+        p.mb-0.text-white(style='font-size: 14px;')
+          | Holisticly cultivate multifunctional quality vectors after Mobile SDK.
+          a.ml-2.font-primary.t700.text-white(href='#')
+            u Learn More
+            |  ›
+      
+      header#header.full-header.transparent-header.dark(data-sticky-class='not-dark')
+        #header-wrap
+          .container.clearfix
+            #primary-menu-trigger
+              i.icon-reorder
+            #logo
+              a.standard-logo(href='index.html', data-dark-logo='images/logo-dark.png')
+                img(src='assets/images/logo.png', alt='Canvas Logo')
+              a.retina-logo(href='index.html', data-dark-logo='images/logo-dark@2x.png')
+                img(src='assets/images/logo@2x.png', alt='Canvas Logo')
+            nav#primary-menu.not-dark.with-arrows
+              ul.not-dark
+                li.current
+                  a(href='#')
+                    div Home
+                li.mega-menu
+                  a(href='#')
+                    div Hosting
+                 
+                  .mega-menu-content.style-2.border-top-0.clearfix
+                    
+                    ul.mega-menu-column.col-lg-3
+                      li
+                        .feature-box.not-dark.fbox-small.fbox-center.nobottommargin
+                          .fbox-icon
+                            img.noradius.nobg.tleft(src='assets/hosting/images/svg/web.svg', alt, style='width: 52px;')
+                          h3.t500
+                            a(href='#') Web Hosting
+                          p.d-none.d-lg-block.mb-0.t300 Is a type of Internet hosting service that allows individuals and organizations to make their website accessible via the World Wide Web.
+                          a.btn.btn-link.mt-2.color.p-0(href='#') Learn More ›
+                    
+                    ul.mega-menu-column.col-lg-3
+                      li
+                        .feature-box.not-dark.fbox-small.fbox-center.nobottommargin
+                          .fbox-icon
+                            img.noradius.nobg.tleft(src='assets/hosting/images/svg/cloud.svg', alt, style='width: 52px;')
+                          h3.t500
+                            a(href='#') Cloud Hosting
+                          p.d-none.d-lg-block.mb-0.t300 The major benefit cloud hosting offers over shared hosting is that it allows you to utilize the resources of multiple servers.
+                          a.btn.btn-link.mt-2.color.p-0(href='#') Learn More ›
+                   
+                    ul.mega-menu-column.col-lg-3
+                      li
+                        .feature-box.not-dark.fbox-small.fbox-center.nobottommargin
+                          .fbox-icon
+                            img.noradius.nobg.tleft(src='assets/hosting/images/svg/dedicated.svg', alt, style='width: 52px;')
+                          h3.t500
+                            a(href='#') Dedicated Hosting
+                          p.d-none.d-lg-block.mb-0.t300 Dedicated server or managed hosting service is a type of Internet hosting in which the client leases an entire server not shared with anyone.
+                          a.btn.btn-link.mt-2.color.p-0(href='#') Learn More ›
+                    
+                    ul.mega-menu-column.col-lg-3
+                      li
+                        .feature-box.not-dark.fbox-small.fbox-center.nobottommargin
+                          .fbox-icon
+                            img.noradius.nobg.tleft(src='assets/hosting/images/svg/shared.svg', alt, style='width: 52px;')
+                          h3.t500
+                            a(href='#') Shared Hosting
+                          p.d-none.d-lg-block.mb-0.t300 Shared Web Hosting service refers to a web hosting service where many websites reside on one web server connected to the Internet.
+                          a.btn.btn-link.mt-2.color.p-0(href='#') Learn More ›
+                li
+                  a(href='#')
+                    div Services
+                li
+                  a(href='#')
+                    div Domains
+                li
+                  a(href='#')
+                    div FAQs
+                li
+                  a(href='#')
+                    div Contact
+              a.button.bg-white.text-dark.button-light.button-rounded.color(href='#') Sign Up
+           
+      section#slider.slider-element.bg-angle
+        
+        img.img-map.parallax(src='assets/hosting/images/svg/map-light.svg', alt, data-0='opacity: 0.05;margin-top:0px', data-800='opacity: 0.5;margin-top:150px')
+        
+        .cloud-wrap
+          .c1
+            .cloud
+          .c2
+            .cloud
+          .c3
+            .cloud
+          .c4
+            .cloud
+          .c5
+            .cloud
+        
+        .vertical-middle.ignore-header.dark
+          .container
+            .row.justify-content-between.align-items-center
+              .col-md-5
+                .slider-title
+                  h2.text-white.text-rotater.mb-3(data-separator=',', data-rotate='fadeIn', data-speed='3500')
+                    | Build your own
+                    br
+                    span.t-rotate.text-white Awesome,Beautiful,Great
+                    |  Website.
+                  p Dramatically syndicate end-to-end leadership skills for virtual solutions. Assertively transform high-payoff ideas rather than virtual process improvements.
+                a.button.bg-white.text-dark.button-light.button-rounded.button-large.color.ml-0(href='#')
+                  | Create Account 
+                  i.icon-line-arrow-right.t600
+              .col-md-5.d-none.d-md-block
+                img(src='assets/hosting/images/3.png', alt)
+      
+      section#content
+        .content-wrap.nopadding
+          .container.clearfix
+            
+            .row.justify-content-center.slider-box-wrap.clearfix
+              .col-10
+                .slider-bottom-box
+                  .row.align-items-center.clearfix
+                    .col-lg-4.mb-3.mb-lg-0
+                      h2.mb-3.h1.t300 Features
+                      p.t400.text-muted.mb-0 Enthusiastically orchestrate orthogonal core competencies before processes.
+                    .col-lg-4.col-sm-6
+                      ul.iconlist.m-0
+                        li
+                          img.mr-2(src='assets/hosting/images/svg/checked.svg', width='20', height='20', alt)
+                          | Assertively Fabricate.
+                        li.pt-3
+                          img.mr-2(src='assets/hosting/images/svg/checked.svg', width='20', height='20', alt)
+                          | Distinctively disseminate.
+                        li.pt-3
+                          img.mr-2(src='assets/hosting/images/svg/checked.svg', width='20', height='20', alt)
+                          | Appropriately predominate.
+                    .col-lg-4.col-sm-6
+                      ul.iconlist.m-0
+                        li.pt-3.pt-lg-0
+                          img.mr-2(src='assets/hosting/images/svg/checked.svg', width='20', height='20', alt)
+                          | Competently facilitate synergist
+                        li.pt-3
+                          img.mr-2(src='assets/hosting/images/svg/checked.svg', width='20', height='20', alt)
+                          | Front-end leadership skills.
+                        li.pt-3
+                          img.mr-2(src='assets/hosting/images/svg/checked.svg', width='20', height='20', alt)
+                          | Infomediaries with front-end
+            
+            .heading-block.center.topmargin-lg.divcenter.nobottomborder.clearfix(style='max-width: 700px')
+              h2 We provide best services for you.
+              p Competently recaptiualize multifunctional schemas without an expanded array of niches. Continually engage cooperative sources vis-a-vis web-enabled benefits.
+            .clear
+            .row.mt-4.clearfix
+              .col-lg-4.col-md-6.mb-5
+                .feature-box.not-dark.fbox-small
+                  .fbox-icon
+                    img.noradius.nobg.tleft(src='assets/hosting/images/svg/web.svg', alt, style='height: 52px;')
+                  h3.t500.text-dark Web Hosting
+                  p.t300 Is a type of Internet hosting service that allows individuals and organizations to make their website accessible via the World Wide Web.
+              .col-lg-4.col-md-6.mb-5
+                .feature-box.not-dark.fbox-small
+                  .fbox-icon
+                    img.noradius.nobg.tleft(src='assets/hosting/images/svg/cloud.svg', alt, style='height: 52px;')
+                  h3.t500.text-dark Cloud Hosting
+                  p.t300 The major benefit cloud hosting offers over shared hosting is that it allows you to utilize the resources of multiple servers.
+              .col-lg-4.col-md-6.mb-5
+                .feature-box.not-dark.fbox-small
+                  .fbox-icon
+                    img.noradius.nobg.tleft(src='assets/hosting/images/svg/dedicated.svg', alt, style='height: 52px;')
+                  h3.t500.text-dark Dedicated Hosting
+                  p.t300 Dedicated server or managed hosting service is a type of Internet hosting in which the client leases an entire server not shared.
+              .col-lg-4.col-md-6
+                .feature-box.not-dark.fbox-small.mb-5
+                  .fbox-icon
+                    img.noradius.nobg.tleft(src='assets/hosting/images/svg/shared.svg', alt, style='height: 52px;')
+                  h3.t500.text-dark Shared Hosting
+                  p.t300 Shared Web Hosting service refers to a web hosting service where many websites reside on one web server connected to the Internet.
+              .col-lg-4.col-md-6
+                .feature-box.not-dark.fbox-small.mb-5
+                  .fbox-icon
+                    img.noradius.nobg.tleft(src='assets/hosting/images/svg/domain.svg', alt, style='height: 52px;')
+                  h3.t500.text-dark Domain Registration
+                  p.t300 Shared Web Hosting service refers to a web hosting service where many websites reside on one web server connected to the Internet.
+              .col-lg-4.col-md-6
+                .feature-box.not-dark.fbox-small.mb-5
+                  .fbox-icon
+                    img.noradius.nobg.tleft(src='assets/hosting/images/svg/activation.svg', alt, style='height: 52px;')
+                  h3.t500.text-dark Instant Activation
+                  p.t300 Shared Web Hosting service refers to a web hosting service where many websites reside on one web server connected to the Internet.
+          
+          .section.section-domain.mt-4.mb-3(style='background: #F5F5F5 url(\'assets/hosting/images/pattern-dark.png\') repeat center center;')
+            .container
+              .row.justify-content-between.align-items-center
+                .col-md-5
+                  .heading-block.mb-0.nobottomborder.clearfix
+                    h3.ls0.nott Looking For Your Premium Domain?
+                    p.mb-0 Competently recaptiualize multifunctional schemas without an expanded array of niches. Continually engage cooperative.
+                .col-md-6.mt-4.mt-lg-0
+                  .input-group.input-group-lg
+                    input.form-control(type='text', placeholder='Your New Domain Name', aria-label='Enter Domain Name')
+                    .input-group-append
+                      select.custom-select#inputGroupSelect01
+                        option(value='com', selected) .com
+                        option(value='org') .org
+                        option(value='net') .net
+                        option(value='info') .info
+                        option(value='us') .us
+                    .input-group-append
+                      button.btn.bgcolor.text-white.dark Search
+          
+          .section.nomargin.nobg
+            .container.clearfix
+              .heading-block.center.mt-0.divcenter.nobottomborder.clearfix(style='max-width: 700px')
+                h2 We provide best services for you.
+                p Competently recaptiualize multifunctional schemas without an expanded array of niches. Continually engage cooperative sources vis-a-vis web-enabled benefits.
+              .row
+                .col-lg-5.col-md-6
+                  .heading-block.mt-md-3.mt-0
+                    .before-heading.color Our Network
+                    h3.nott.ls0 16 TBPS Capacity and 140 Data Center Global Network
+                  .row
+                    .col-6
+                      ul.iconlist.ml-0
+                        li
+                          img(src='assets/hosting/images/flags/uk.png', alt)
+                          a(href='#') United Kingdom
+                        li
+                          img(src='assets/hosting/images/flags/us.png', alt)
+                          a(href='#') USA
+                        li
+                          img(src='assets/hosting/images/flags/br.png', alt)
+                          a(href='#') Brazil
+                        li
+                          img(src='assets/hosting/images/flags/sa.png', alt)
+                          a(href='#') South Africa
+                        li
+                          img(src='assets/hosting/images/flags/in.png', alt)
+                          a(href='#') India
+                    .col-6
+                      ul.iconlist.ml-0
+                        li
+                          img(src='assets/hosting/images/flags/si.png', alt)
+                          a(href='#') Singapore
+                        li
+                          img(src='assets/hosting/images/flags/ja.png', alt)
+                          a(href='#') Japan
+                        li
+                          img(src='assets/hosting/images/flags/au.png', alt)
+                          a(href='#') Australia
+                        li
+                          img(src='assets/hosting/images/flags/ca.png', alt)
+                          a(href='#') Canada
+                        li
+                          a(href='#') See More..
+                .col-lg-7.col-md-6
+                  #hotspot-img.hotspot-img.mt-2.responsive-hotspot-wrap
+                    img.img-responsive(src='assets/hosting/images/svg/map.png', alt)
+                    //  Circle #1 
+                    .hot-spot(x='1970', y='830')
+                      .circle
+                      .tooltip
+                        p singapore
+                    //  Circle #2 
+                    .hot-spot(x='330', y='522')
+                      .circle
+                      .tooltip
+                        p San Fransisco
+                    //  Circle #3 
+                    .hot-spot(x='2350', y='1110')
+                      .circle
+                      .tooltip
+                        p Sydney
+                    //  Circle #4 
+                    .hot-spot(x='1222', y='395')
+                      .circle
+                      .tooltip
+                        p London
+                    //  Circle #5 
+                    .hot-spot(x='1800', y='760')
+                      .circle
+                      .tooltip
+                        p Bangalore
+                    //  Circle #6 
+                    .hot-spot(x='2250', y='560')
+                      .circle
+                      .tooltip
+                        p Tokyo
+                    //  Circle #7 
+                    .hot-spot(x='1366', y='1134')
+                      .circle
+                      .tooltip
+                        p Cape Town
+                    //  Circle #8 
+                    .hot-spot(x='880', y='990')
+                      .circle
+                      .tooltip
+                        p Brasilla
+                    //  Circle #8 
+                    .hot-spot(x='710', y='395')
+                      .circle
+                      .tooltip
+                        p Toronto
+          .section.bg-angle.notopmargin(style='background: #F9F9F9 url(\'assets/hosting/images/pattern-dark.png\') repeat center center; padding: 80px 0')
+            .container.clearfix
+              .heading-block.center.mt-0.divcenter.nobottomborder.clearfix(style='max-width: 750px')
+                h2 Hosting that scales with your Business
+                p Competently recaptiualize multifunctional schemas without an expanded array of niches. Continually engage cooperative sources vis-a-vis web-enabled benefits.
+              .row.mb-2.align-items-stretch
+                .col-lg-8.col-md-8
+                  .row.align-items-stretch.clearfix
+                    .col-md-12
+                      .row.align-items-stretch
+                        .col-md-8.col-sm-8
+                          .card.mb-4
+                            .card-body
+                              .d-flex.justify-content-between
+                                h4.mb-4 vCPU
+                              input.range-slider-cpu
+                        .col-md-4.col-sm-4.d-none.d-sm-flex.card.bgcolor.text-white.text-center.mb-4
+                          .card-body
+                            h2.cpu-price.text-white.mb-0.t700
+                            p.card-text.mb-0(style='opacity: .8;')
+                              | $10 
+                              span.font-italic per vCPU
+                      .row.align-items-stretch
+                        .col-md-8.col-sm-8
+                          .card.mb-4
+                            .card-body
+                              .d-flex.justify-content-between
+                                h4.mb-4 Ram
+                              input.range-slider-ram
+                        .col-md-4.col-sm-4.d-none.d-sm-flex.card.bgcolor.text-white.text-center.mb-4
+                          .card-body
+                            h2.ram-price.text-white.mb-0.t700
+                            p.card-text.mb-0(style='opacity: .8;')
+                              | $8 
+                              span.font-italic per RAM
+                      .row.align-items-stretch
+                        .col-md-8.col-sm-8
+                          .card
+                            .card-body
+                              .d-flex.justify-content-between
+                                h4.mb-4 Storage
+                              input.range-slider-storage
+                        .col-md-4.col-sm-4.d-none.d-sm-flex.card.bgcolor.text-white.text-center
+                          .card-body
+                            h2.storage-price.text-white.mb-0.t700
+                            p.card-text.mb-0(style='opacity: .8;')
+                              | $.5 
+                              span.font-italic per Storage
+                .col-lg-4.col-md-4.mt-4.mt-md-0
+                  .card.text-center
+                    .card-body.py-4
+                      h3.card-title.t400 Your Plan
+                      .pricing-price.t600.py-2
+                      p.card-text.pricing-sub Billed Monthly
+                    .line.my-1
+                    .card-body.py-4
+                      ul.iconlist.ml-0(style='opacity: .8')
+                        li Un-Mitered Bandwith
+                        li 2 Dedicated IPs
+                        li Shared SSL certificate
+                        li 30 Days Money Back
+                      a.button.button-rounded.button-large.ls0.t400.m-0.nott(href='#') Order Now
+              
+
+    block append scripts
+    
+    script(src='assets/js/jquery.js')
+    //script(src='assets/js/plugins.js')
+    script(src='assets/js/jquery.hotspot.js')
+    script(src='assets/js/components/rangeslider.min.js')
+    script(src='assets/js/functions.js')
+    script.
+      
+      jQuery(document).ready( function() {
+      			var pricingCPU = 1,
+      				pricingRAM = 1,
+      				pricingStorage = 10,
+      				elementCPU = $(".range-slider-cpu"),
+      				elementRAM = $(".range-slider-ram"),
+      				elementStorage = $(".range-slider-storage");
+      
+      			elementCPU.on( 'change', function(){
+      				pricingCPU = $(this).prop('value');
+      				calculatePrice( pricingCPU, pricingRAM, pricingStorage );
+      			});
+      
+      			elementRAM.on( 'onStart change', function(){
+      				pricingRAM = $(this).prop('value');
+      				calculatePrice( pricingCPU, pricingRAM, pricingStorage );
+      			});
+      
+      			elementStorage.on( 'change', function(){
+      				pricingStorage = $(this).prop('value');
+      				calculatePrice( pricingCPU, pricingRAM, pricingStorage );
+      			});
+      
+      			calculatePrice( pricingCPU, pricingRAM, pricingStorage );
+      
+      			function calculatePrice( cpu, ram, storage ) {
+      				var pricingValue = ( Number(cpu) * 10 ) + ( Number(ram) * 8 ) + ( Number(storage) * 0.5 );
+      				jQuery('.cpu-value').html(pricingCPU);
+      				jQuery('.ram-value').html(pricingRAM);
+      				jQuery('.storage-value').html(pricingStorage);
+      				jQuery('.cpu-price').html('$'+pricingCPU * 10);
+      				jQuery('.ram-price').html('$'+pricingRAM * 8);
+      				jQuery('.storage-price').html('$'+pricingStorage * 0.5);
+      				jQuery('.pricing-price').html( '$'+pricingValue );
+      			}
+      		});
+      

@@ -83,6 +83,9 @@ app.get('/app-estimate', function(req, res) {
   res.render('cost-estimator', {user: req.user});
 });
 
+app.get('/newhome', function(req, res) {
+  res.render('demo-hosting', {user: req.user});
+});
 //The 404 Route (ALWAYS Keep this as the last route)
 app.use(function (req, res, next) {
   res.status(404);
